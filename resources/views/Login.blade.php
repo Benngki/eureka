@@ -23,12 +23,12 @@
                 <h3 style="font-family: 'Clarendon';" >Login</h3>
                 <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?<a href=""> Sign Up Here</a></p>
                 <form method="post">
-                    <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com">
+                    <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com" required >
                     <div class="d-flex justify-content-end">
-                        <input type="password" name="password" class="form-control mb-3" id="PasswordInput" placeholder="Password" maxlength="12">
+                        <input type="password" name="password" class="form-control mb-3" id="PasswordInput" placeholder="Password" maxlength="12" required>
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword"></i>
                     </div>
-                    <button type="button" class="btn btnLogin w-100 mb-3" style="">Login</button>
+                    <button type="submit" class="btn btnLogin w-100 mb-3" style="">Login</button>
                 </form>
                 <div class="text-center" style="font-size: smaller;">
                     <a style="font-family: 'Open Sans', sans-serif;" href="">Forgot Password?</a>
@@ -41,6 +41,10 @@
             </div>
         </div>
     </div>
+    
+        
+
+
 
     <script>
         const togglePassword = document.querySelector("#togglePassword");

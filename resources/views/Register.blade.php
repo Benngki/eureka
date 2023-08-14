@@ -15,12 +15,12 @@
 <body class="min-vh-100 d-flex align-items-center">
     <div class="container my-2">
         <div class="d-flex justify-content-center">
-            <img style="max-width: 25%;" src="{{asset('asset/logo.svg')}}"  alt="Logo Dialog Diri">
+            <img style="max-width: 25%;" src="{{asset('img/logo.svg')}}"  alt="Logo Dialog Diri">
         </div>
 
         <div class="d-flex justify-content-center mt-5">
             <div>
-                <img style="max-width: 100%" src="{{asset('asset/RegisterImg.png')}}"  alt="">
+                <img style="max-width: 100%" src="{{asset('img/RegisterImg.png')}}"  alt="">
             </div>
             
             <div>
@@ -58,8 +58,8 @@
                     <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Register instantly using your social media</p>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn rounded-5"><img src="/asset/logoGoogle.png" alt=""></button>
-                    <button type="button" class="btn rounded-5"><img src="/asset/logoFB.png" alt=""></button>
+                    <button type="button" class="btn rounded-5"><img src="/img/logoGoogle.png" alt=""></button>
+                    <button type="button" class="btn rounded-5"><img src="/img/logoFB.png" alt=""></button>
                 </div>
             </div>
         </div>

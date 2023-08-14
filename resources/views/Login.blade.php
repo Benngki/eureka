@@ -14,11 +14,11 @@
 <body>
     <div class="container mt-5">
         <div class="d-flex justify-content-center">
-            <img style="width: 25%;" src="{{asset('asset/logo.svg')}}" alt="Logo Dialog Diri">
+            <img style="width: 25%;" src="{{asset('img/logo.svg')}}" alt="Logo Dialog Diri">
         </div>
 
         <div class="d-flex justify-content-center mt-5">
-            <img style="width: 60%" src="{{asset('asset/Gambasr_login.png')}}" alt="">
+            <img style="width: 60%" src="{{asset('img/Gambasr_login.png')}}" alt="">
             <div>
                 <h3 style="font-family: 'Clarendon';" >Login</h3>
                 <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?<a href="/register"> Sign Up Here</a></p>
@@ -35,8 +35,8 @@
                     <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Login instantly using your social media</p>
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="button" class="btn rounded-5"><img src="{{asset('asset/logoGoogle.png')}}" alt=""></button>
-                    <button type="button" class="btn rounded-5"><img src="{{asset('asset/logoFB.png')}}" alt=""></button>
+                    <button type="button" class="btn rounded-5"><img src="{{asset('img/logoGoogle.png')}}" alt=""></button>
+                    <button type="button" class="btn rounded-5"><img src="{{asset('img/logoFB.png')}}" alt=""></button>
                 </div>
             </div>
         </div>

@@ -25,7 +25,7 @@
             
             <div>
                 <h3 style="font-family: 'Clarendon';" >Register</h3>
-                <p style="font-family: 'Open Sans', sans-serif;">Already have an account?<a href=""> Login Here</a></p>
+                <p style="font-family: 'Open Sans', sans-serif;">Already have an account?<a href="/login"> Login Here</a></p>
                 <form method="post" action="/Register.blade.php">
                     <input type="text" class="form-control mb-3" id="UsernameInput" placeholder="Username" required>
                     <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com" required>

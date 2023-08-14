@@ -21,7 +21,7 @@
             <img style="width: 60%" src="{{asset('asset/Gambasr_login.png')}}" alt="">
             <div>
                 <h3 style="font-family: 'Clarendon';" >Login</h3>
-                <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?<a href=""> Sign Up Here</a></p>
+                <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?<a href="/register"> Sign Up Here</a></p>
                 <form method="post">
                     <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com" required >
                     <div class="d-flex justify-content-end">

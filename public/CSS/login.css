@@ -1,0 +1,64 @@
+a{
+    text-decoration: none;
+    color: #48904F;
+    font-weight: bold;
+}
+a:hover{
+    color: #48904F;
+    text-decoration:underline;
+}
+.btnLogin{
+    background: #CBCBCB;
+}
+.btnLogin:hover{
+    background:#a4a4a4 ;
+}
+form i {
+    cursor: pointer;
+}
+
+
+#message {
+    display:none;
+    background:#e2e2e2;
+    color: #000;
+    border-radius: 8px;
+   
+  }
+  
+  #message p {
+    font-size: 15px;
+  }
+  #Confirm {
+    display:none;
+    background:#e2e2e2;
+    color: #000;
+    border-radius: 8px;
+   
+  }
+  
+  #Confirm p {
+    font-size: 15px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    
+    content: "✖";
+  }

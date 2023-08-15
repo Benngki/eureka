@@ -30,19 +30,21 @@
                 <div style="background-color: #48904F" class="col-1 vh-100 d-flex flex-column ">
                     <a class="btn my-2 mt-4 p-0" role="button">
                         <img class="w-50" src="{{asset('img/avatar.png')}}">
-                        <p>Username</p>
+                        <p class="m-0">Username</p>
                     </a>
 
                     <a class="btn my-2 p-0" role="button">
-                        <div class="p-2 bg-white">
-                            <img class="w-50" src="{{asset('img/chatbot.png')}}">
+                        <div class="py-1 m-2 mb-0 rounded-4 bg-white">
+                            <img class="w-75" src="{{asset('img/chatbot.png')}}">
                         </div>
-                        <p>Chatbot</p>
+                        <p class="m-0">Chatbot</p>
                     </a>
 
                     <a class="btn my-2 p-0" role="button">
-                        <img class="w-50" src="{{asset('img/test.png')}}">
-                        <p>Test</p>
+                        <div class="py-1 m-2 mb-0 rounded-4 bg-white">
+                            <img class="w-75" src="{{asset('img/test.png')}}">
+                        </div>
+                        <p class="m-0">Test</p>
                     </a>
 
                     <a href="#" class="btn mt-auto mb-4" role="button">

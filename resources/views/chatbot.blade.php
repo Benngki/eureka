@@ -27,34 +27,34 @@
         <div class="container-fluid text-center">
             <div class="row">
                 {{-- start of sidebar --}}
-                <div style="background-color: #48904F" class="col-1 vh-100 d-flex flex-column ">
-                    <a class="btn my-2 mt-4 p-0" role="button">
-                        <img class="w-50" src="{{asset('img/avatar.png')}}">
+                <div style="background-color: #48904F; position: fixed" class="col-1 vh-100 d-flex flex-column ">
+                    <a class="btn my-2 mt-4 p-0" role="button" href="/profile">
+                        <img class="w-50" src="{{ asset('img/avatar.png') }}">
                         <p class="m-0">Username</p>
                     </a>
 
-                    <a class="btn my-2 p-0" role="button">
+                    <a class="btn my-2 p-0" role="button" href="/chatbot">
                         <div class="py-1 m-2 mb-0 rounded-4 bg-white">
-                            <img class="w-75" src="{{asset('img/chatbot.png')}}">
+                            <img class="w-75" src="{{ asset('img/chatbot.png') }}">
                         </div>
                         <p class="m-0">Chatbot</p>
                     </a>
 
                     <a class="btn my-2 p-0" role="button">
                         <div class="py-1 m-2 mb-0 rounded-4 bg-white">
-                            <img class="w-75" src="{{asset('img/test.png')}}">
+                            <img class="w-75" src="{{ asset('img/test.png') }}">
                         </div>
                         <p class="m-0">Test</p>
                     </a>
 
                     <a href="#" class="btn mt-auto mb-4" role="button">
-                        <img class="w-75" src="{{asset('img/home.png')}}">
+                        <img class="w-75" src="{{ asset('img/home.png') }}">
                     </a>
                 </div>
                 {{-- end of sidebar --}}
 
 
-                <div style="background-color: #A2C29F" class="col-11 d-flex flex-column vh-100">
+                <div style="background-color: #A2C29F" class="col-11 offset-1 d-flex flex-column vh-100">
                     <h1 class="text-end m-4">
                         <img src="{{ asset('img/logo.png') }}">
                     </h1>

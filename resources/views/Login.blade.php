@@ -31,7 +31,7 @@
                     <button type="submit" class="btn btnLogin w-100 mb-3" style="">Login</button>
                 </form>
                 <div class="text-center" style="font-size: smaller;">
-                    <a style="font-family: 'Open Sans', sans-serif;" href="">Forgot Password?</a>
+                    <a style="font-family: 'Open Sans', sans-serif;" href="/forgot-password">Forgot Password?</a>
                     <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Login instantly using your social media</p>
                 </div>
                 <div class="d-flex justify-content-center">

@@ -5,48 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./HomeTest.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+        font-family: "clarendon";
+        src: {{ asset('fonts/CLARENDO.ttf') }}
+        
+    }
+    .TMD{
+     font-family: 'clarendon';
+
+       }
+    .Opensans{
+      font-family: 'Open Sans';
+    }
+    </style>
+    <link rel="stylesheet" href="./HomeTest.css" />
+    
 </head>
 
 <body>
-    <div class="cotainer d-flex flex-column align-items-center">
-        <div class="d-flex justify-content-center mt-5">
-            <div class="MengelDiri ">
-                <p class="text-center">
-                    Test Mengenal Diri
-                </p>
-                <div class="Test1">
-                    <p>
-                        Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
-                        sendiri
-                    </p>
+    <main class="vh-100">
+        <div class="container-fluid text-center">
+            <div class="row">
+                {{-- start of sidebar --}}
+                <div style="background-color: #48904F; position: fixed" class="col-1 vh-100 d-flex flex-column ">
+                <div> 
+                    <a class="btn my-2 mt-4 p-0 bg-danger" role="button" href="/profile">
+                        <img class="w-50" src="{{ asset('img/avatar.png') }}">
+                        <p class="m-0">Username</p>
+                    </a>
+                </div>
+
+                    <a class="btn my-2 p-0" role="button" href="/chatbot">
+                        <div class="py-1 m-2 mb-0 rounded-4 bg-white">
+                            <img class="w-75" src="{{ asset('img/chatbot.png') }}">
+                        </div>
+                        <p class="m-0">Chatbot</p>
+                    </a>
+
+                    <a class="btn my-2 p-0" role="button">
+                        <div class="py-1 m-2 mb-0 rounded-4 bg-white">
+                            <img class="w-75" src="{{ asset('img/test.png') }}">
+                        </div>
+                        <p class="m-0">Test</p>
+                    </a>
+
+                    <a href="#" class="btn mt-auto mb-4" role="button">
+                        <img class="w-75" src="{{ asset('img/home.png') }}">
+                    </a>
+                </div>
+                {{-- end of sidebar --}}
+
+
+                <div class="col-11 offset-1 d-flex flex-column vh-100 justify-content-center">
+                    <div class="cotainer d-flex flex-column align-items-center">
+                        <div class="d-flex justify-content-center">
+                            <div class="MengelDiri ">
+                                <h1 class="TMD text-center">
+                                    Test Mengenal Diri
+                                </h1>
+                                <div class="Opensans Test1">
+                                    <p>
+                                        Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
+                                        sendiri
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-self-stretch">
+                            <img style=" width: 30%;" class="Dialogdiri" alt="" src="{{ asset('img/image 13.png') }}" />
+                        </div>
+                
+                      <div class=" d-flex justify-content-center flex-column text-start" >
+                        <p class="invisible m-0">
+                          Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
+                          sendiri
+                        </p>
+                          <h3 class="TMD">
+                            Panduan Mengisi:
+                          </h3>
+                          <p class="m-0 Opensans"> 1. Kerjakan dengan pikiran dan hati yang tenang </p>
+                          <p class="m-0 Opensans"> 2. Tidak ada jawaban salah/benar </p>
+                          <p class="Opensans"> 3. jawab sesuai dengan keadaanmu saat ini </p>
+                      </div>
+                      <button type="button" class="boti btn btn-success TMD mt-5">Mulai</button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center align-self-stretch">
-            <img style=" width: 30%;" class="Dialogdiri" alt="" src="{{ asset('img/image 13.png') }}" />
-        </div>
-
-      <div class=" d-flex justify-content-center flex-column text-start" >
-        <p class="invisible m-0">
-          Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
-          sendiri
-        </p>
-          <p>
-            Panduan Mengisi:
-          </p>
-          <p class="m-0"> 1. Kerjakan dengan pikiran dan hati yang tenang </p>
-          <p class="m-0"> 2. Tidak ada jawaban salah/benar </p>
-          <p> 3. jawab sesuai dengan keadaanmu saat ini </p>
-      </div>
-    </div>
 
 
+    </main>
 
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

@@ -14,9 +14,9 @@
 
 </head>
 
-<body class="d-flex flex-column justify-content-center bg-danger">
+<body class="min-vh-100 d-flex flex-column py-4">
     <div class="container-fluid text-center">
-        <div class="d-flex flex-column justify-content-center mt-5">
+        <div class="d-flex flex-column justify-content-center">
             <div class="cotainer d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-center">
                     <div class="MengelDiri ">
@@ -33,8 +33,9 @@
         </div>
     </div>
 
-    <div class="container-fluid text-center bg-danger d-flex justify-content-center h-100 my-auto">
-        <div class="card " style="border:none">
+    <div class="container-fluid text-center d-flex justify-content-center flex-fill">
+        
+        <div class="card align-self-center" style="border:none">
             <p class="title mt-auto">1. Kamu lebih suka sosialisasi atau bergaul?</p>
             <div class="content">
                 <input type="radio" name="rd" id="one">

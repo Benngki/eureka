@@ -34,6 +34,26 @@ Route::get('/forgot-password', function () {
     return view('ForgotPassword');
 });
 
+Route::get('/HasilTest1', function () {
+    return view('HasilTest1');
+});
+
 Route::get('/profile', function () {
     return view('profile');
+});
+
+Route::get('/HasilTest2', function () {
+    return view('HasilTest2');
+});
+
+Route::get('/HasilTest3', function () {
+    return view('HasilTest3');
+});
+
+Route::get('/HasilTest4', function () {
+    return view('HasilTest4');
+});
+
+Route::get('/TesPsikolog', function () {
+    return view('TesPsikolog');
 });

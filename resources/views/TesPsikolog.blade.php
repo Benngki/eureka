@@ -15,28 +15,32 @@
 </head>
 
 <body class="min-vh-100 d-flex flex-column py-4">
+<div class="container-fluid text-center position-absolute"style="opacity: 30%; background-size: vh-100 ; background-image: url('{{ asset('img/testsoal.jpg') }}'); height: 100%"></div>
     <div class="container-fluid text-center">
         <div class="d-flex flex-column justify-content-center">
             <div class="cotainer d-flex flex-column align-items-center">
                 <div class="d-flex justify-content-center">
                     <div class="MengelDiri ">
-                        <h1 class="TMD text-center">
+                        <h1 class="TMD text-center mt-2">
                             Test Mengenal Diri
                         </h1>
                     </div>
-                </div>
-                <div class="progress mt-5" role="progressbar" aria-label="Basic example" aria-valuenow="0"
-                    aria-valuemin="0" aria-valuemax="100" style="width: 30%">
-                    <div class="progress-bar" style="width: 20% ; "></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid text-center d-flex justify-content-center flex-fill">
-        
-        <div class="card align-self-center" style="border:none">
-            <p class="title mt-auto">1. Kamu lebih suka sosialisasi atau bergaul?</p>
+    {{-- <div class="d-flex justify-content-center align-self-stretch ">
+        <img style=" width: 20%;" class="Dialogdirir" alt="" src="{{ asset('img/test soal.jpg') }}" />
+    </div> --}}
+
+    <div class="container-fluid text-center d-flex justify-content-center flex-fill position-relative">
+        <div class="card align-self-center" style="border:none; background-color:transparent">
+            <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100" style="width: 100%">
+                <div class="progress-bar" style="width: 20% ; "></div>
+            </div>
+            <p class="title mt-4">1. Kamu lebih suka sosialisasi atau bergaul?</p>
             <div class="content">
                 <input type="radio" name="rd" id="one">
                 <input type="radio" name="rd" id="two">
@@ -68,6 +72,7 @@
             </div>
         </div>
     </div>
+
 
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

@@ -14,8 +14,12 @@
 
 </head>
 
-<body class="min-vh-100 d-flex flex-column py-4">
-<div class="container-fluid text-center position-absolute"style="opacity: 30%; background-size: vh-100 ; background-image: url('{{ asset('img/testsoal.jpg') }}'); height: 100%"></div>
+<body class="vh-100 d-flex flex-column position-relative overflow-hidden p-4">
+<div class="container-fluid text-center position-absolute"style="
+    opacity: 30%; background-size: vh-100 ; 
+    background-image: url('{{ asset('img/testsoal.jpg') }}'); 
+    height: 100%; background-position: top;
+    transform: translateY(3rem);"></div>
     <div class="container-fluid text-center">
         <div class="d-flex flex-column justify-content-center">
             <div class="cotainer d-flex flex-column align-items-center">

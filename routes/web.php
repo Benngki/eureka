@@ -17,9 +17,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/chatbot', Chatbot::class);
+Route::get('/chatbot', function () {
+    return view('chatbot');
+});
 
-Route::get('/profile', Profile::class);
+Route::get('/profile', function () {
+    return view('profile');
+});
 
 Route::get('/', function () {
     return view('HomeTest');

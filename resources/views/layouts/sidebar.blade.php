@@ -1,4 +1,4 @@
-<div style="background-color: #48904F; position: fixed" class="col-1 vh-100 d-flex flex-column ">
+<div style="background-color: #48904F; position: fixed" class="col-1 vh-100 d-flex flex-column rounded-end-5 ">
     <a wire:navigate class="btn my-2 mt-4 p-0" role="button" href="/profile">
         <img class="w-50" src="{{ asset('img/avatar.png') }}">
         <p class="m-0">Username</p>
@@ -18,7 +18,7 @@
         <p class="m-0">Test</p>
     </a>
 
-    <a href="#" class="btn mt-auto mb-4" role="button">
-        <img class="w-75" src="{{ asset('img/home.png') }}">
+    <a href="#" class="btn mt-auto mb-5 mx-auto" role="button" style="width: 60%">
+        <img class="w-100" src="{{ asset('img/home.png') }}">
     </a>
 </div>

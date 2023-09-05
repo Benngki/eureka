@@ -32,6 +32,7 @@
 
 </head>
 <body>
+  @include("layouts.sidebar")
   <div class="container-fluid text-center">
     <div class="col-11 offset-1 d-flex flex-column vh-100 justify-content-center">
       <div class="cotainer d-flex flex-column align-items-center">

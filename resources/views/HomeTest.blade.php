@@ -33,32 +33,7 @@
         <div class="container-fluid text-center">
             <div class="row">
                 {{-- start of sidebar --}}
-                <div style="background-color: #48904F; position: fixed" class="col-1 vh-100 d-flex flex-column ">
-                <div> 
-                    <a class="btn my-2 mt-4 p-0 bg-danger" role="button" href="/profile">
-                        <img class="w-50" src="{{ asset('img/avatar.png') }}">
-                        <p class="m-0">Username</p>
-                    </a>
-                </div>
-
-                    <a class="btn my-2 p-0" role="button" href="/chatbot">
-                        <div class="py-1 m-2 mb-0 rounded-4 bg-white">
-                            <img class="w-75" src="{{ asset('img/chatbot.png') }}">
-                        </div>
-                        <p class="m-0">Chatbot</p>
-                    </a>
-
-                    <a class="btn my-2 p-0" role="button">
-                        <div class="py-1 m-2 mb-0 rounded-4 bg-white">
-                            <img class="w-75" src="{{ asset('img/test.png') }}">
-                        </div>
-                        <p class="m-0">Test</p>
-                    </a>
-
-                    <a href="#" class="btn mt-auto mb-4" role="button">
-                        <img class="w-75" src="{{ asset('img/home.png') }}">
-                    </a>
-                </div>
+                @include('layouts.sidebar')
                 {{-- end of sidebar --}}
 
 
@@ -69,7 +44,7 @@
                                 <h1 class="TMD text-center">
                                     Test Mengenal Diri
                                 </h1>
-                                <div class="Opensans Test1">
+                                <div class="Opensans Test1 ">
                                     <p>
                                         Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
                                         sendiri
@@ -82,18 +57,18 @@
                         </div>
                 
                       <div class=" d-flex justify-content-center flex-column text-start" >
-                        <p class="invisible m-0">
+                        <p class="invisible m-0 ">
                           Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
                           sendiri
                         </p>
                           <h3 class="TMD">
                             Panduan Mengisi:
                           </h3>
-                          <p class="m-0 Opensans"> 1. Kerjakan dengan pikiran dan hati yang tenang </p>
-                          <p class="m-0 Opensans"> 2. Tidak ada jawaban salah/benar </p>
-                          <p class="Opensans"> 3. jawab sesuai dengan keadaanmu saat ini </p>
+                          <p class="m-0 Opensans "> 1. Kerjakan dengan pikiran dan hati yang tenang </p>
+                          <p class="m-0 Opensans "> 2. Tidak ada jawaban salah/benar </p>
+                          <p class="Opensans "> 3. jawab sesuai dengan keadaanmu saat ini </p>
                       </div>
-                      <button type="button" class="boti btn btn-success TMD mt-5" style="border-radius:100px">Mulai</button>
+                      <button type="button" class="boti btn btn-success TMD mt-5 " style="border-radius:100px">Mulai</button>
                     </div>
                 </div>
             </div>

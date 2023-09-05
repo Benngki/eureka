@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>DialogDiri</title>
 </head>
-<body>
-    <div class="container mt-5">
+<body class="min-vh-100 d-flex align-items-center">
+    <div class="container my-auto ">
         <div class="d-flex justify-content-center">
             <img style="width: 25%;" src="{{asset('img/logo.svg')}}" alt="Logo Dialog Diri">
         </div>

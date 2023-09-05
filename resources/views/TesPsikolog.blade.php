@@ -11,6 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: "clarendon";
+            src: {{ asset('fonts/CLARENDO.ttf') }}
+        }
+
+        .TMD {
+            font-family: 'clarendon';
+
+        }
+
+        .Opensans {
+            font-family: 'Open Sans';
+        }
+
+        .inter {
+            font-family: 'inter'
+        }
+    </style>
+    <link rel="stylesheet" href="./TesPsikolog.css" />
 
 </head>
 
@@ -30,12 +50,12 @@
     height: 100%; background-position: top;
     transform: translateY(3rem);">
                 </div>
-                <div class="container-fluid text-center">
+                <div class="container-fluid text-center position-relative ">
                     <div class="d-flex flex-column justify-content-center">
                         <div class="cotainer d-flex flex-column align-items-center">
                             <div class="d-flex justify-content-center">
                                 <div class="MengelDiri ">
-                                    <h1 class="TMD text-center mt-2">
+                                    <h1 class="TMD text-center mt-4">
                                         Test Mengenal Diri
                                     </h1>
                                 </div>
@@ -49,12 +69,15 @@
     </div> --}}
 
                 <div class="container-fluid text-center d-flex justify-content-center flex-fill position-relative">
+                    <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
+                        <button class="btn" type="button"><img src="{{ asset('img/next1.png') }}"></button>
+                    </div>
                     <div class="card align-self-center" style="border:none; background-color:transparent">
                         <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="0"
                             aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                             <div class="progress-bar" style="width: 20% ; "></div>
                         </div>
-                        <p class="title mt-4">1. Kamu lebih suka sosialisasi atau bergaul?</p>
+                        <p class="title mt-4">Kamu lebih suka sosialisasi atau bergaul ?</p>
                         <div class="content">
                             <input type="radio" name="rd" id="one">
                             <input type="radio" name="rd" id="two">
@@ -85,6 +108,9 @@
                             </label>
                         </div>
                     </div>
+                </div>
+                <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
+                    <button class="btn" type="button"><img src="{{ asset('img/next2.png') }}"></button>
                 </div>
 
             </div>

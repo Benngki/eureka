@@ -5,14 +5,14 @@
     </a>
 
     <a wire:navigate class="btn my-2 p-0" role="button" href="/chatbot">
-        <div class="py-1 m-2 mb-0 rounded-4 bg-white mx-auto p-2" style="width: 60%">
+        <div class="py-1 m-2 mb-0 rounded-4 bg-white mx-auto p-2" style="width: 50%">
             <img class="w-100" src="{{ asset('img/chatbot.png') }}">
         </div>
         <p class="m-0">Chatbot</p>
     </a>
 
     <a class="btn my-2 p-0" role="button">
-        <div class="py-1 m-2 mb-0 rounded-4 bg-white mx-auto p-2" style="width: 60%">
+        <div class="py-1 m-2 mb-0 rounded-4 bg-white mx-auto p-2" style="width: 50%">
             <img class="w-100" src="{{ asset('img/test.png') }}">
         </div>
         <p class="m-0">Test</p>

@@ -63,3 +63,7 @@
 .card input[type="radio"]{
   display: none;
 }
+
+.nextpage{
+  border-color: #48904F;
+}

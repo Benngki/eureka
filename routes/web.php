@@ -1,5 +1,8 @@
 <?php
 
+use App\Livewire\Chatbot;
+use App\Livewire\Counter;
+use App\Livewire\Profile;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +17,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/chatbot', function () {
-    return view('chatbot');
-});
+Route::get('/chatbot', Chatbot::class);
+
+Route::get('/profile', Profile::class);
 
 Route::get('/', function () {
     return view('HomeTest');
@@ -38,10 +41,6 @@ Route::get('/HasilTest1', function () {
     return view('HasilTest1');
 });
 
-Route::get('/profile', function () {
-    return view('profile');
-});
-
 Route::get('/HasilTest2', function () {
     return view('HasilTest2');
 });
@@ -57,3 +56,7 @@ Route::get('/HasilTest4', function () {
 Route::get('/TesPsikolog', function () {
     return view('TesPsikolog');
 });
+
+
+// Livewire
+Route::get('/counter', Counter::class);

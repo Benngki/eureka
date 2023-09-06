@@ -35,6 +35,10 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/forgot-password', function () {
         return view('guest/ForgotPassword');
     });
+    Route::get('/ResetPassword', function () {
+        return view('guest/ChangePassword');
+    });
+    
 });
 
 Route::get('/test', function () {
@@ -60,6 +64,7 @@ Route::get('/HasilTest4', function () {
 Route::get('/TesPsikolog', function () {
     return view('TesPsikolog');
 });
+
 
 
 // Livewire

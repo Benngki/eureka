@@ -18,9 +18,9 @@
 
 <body class="min-vh-100 d-flex align-items-center">
     <div class="container my-auto ">
-        <div class="d-flex justify-content-center">
+        <a href="{{ route('home') }}" class="d-flex justify-content-center">
             <img style="max-width: 25%;" src="{{ asset('img/logo.svg') }}" alt="Logo Dialog Diri">
-        </div>
+        </a>
 
         <div class="d-flex justify-content-center mt-5">
             <img style="max-width: 100%" src="{{ asset('img/Gambasr_login.png') }}" alt="">
@@ -54,7 +54,7 @@
         </div>
     </div>
     
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    {{-- <div class="g-signin2" data-onsuccess="onSignIn"></div> --}}
 
 
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,17 +15,52 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    return view('Home');
+Route::get('/chatbot', function () {
+    return view('chatbot');
+})->name('chatbot');
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');    
+
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', function () {
+        return view('guest/Login');
+    })->name('login');
+    
+    Route::get('/register', function () {
+        return view('guest/Register');
+    });
+    
+    Route::get('/forgot-password', function () {
+        return view('guest/ForgotPassword');
+    });
 });
 
-Route::get('/Login', function () {
-    return view('Login');
+Route::get('/test', function () {
+    return view('HomeTest');
+})->name('test');
+
+Route::get('/HasilTest1', function () {
+    return view('HasilTest1');
+});
+
+Route::get('/HasilTest2', function () {
+    return view('HasilTest2');
+});
+
+Route::get('/HasilTest3', function () {
+    return view('HasilTest3');
+});
+
+Route::get('/HasilTest4', function () {
+    return view('HasilTest4');
+});
+
+Route::get('/TesPsikolog', function () {
+    return view('TesPsikolog');
 });
 
 
-
-
-Route::get('/Register', function () {
-    return view('Register');
-});
+// Livewire
+Route::get('/counter', Counter::class);

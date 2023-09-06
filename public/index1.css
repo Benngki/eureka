@@ -1,0 +1,425 @@
+.first-name,
+.last-name,
+.phone-number {
+  position: absolute;
+  top: 174px;
+  left: 592px;
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+  display: inline-block;
+  width: 177px;
+  height: 18px;
+}
+.last-name,
+.phone-number {
+  top: 266px;
+  width: 174px;
+  height: 21px;
+}
+.phone-number {
+  top: 363px;
+  width: 242px;
+}
+.profile-child {
+  position: absolute;
+  top: 202px;
+  left: 592px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 772px;
+  height: 46px;
+}
+.jedith-almando {
+  position: absolute;
+  top: 216px;
+  left: 624px;
+  font-weight: 200;
+  display: inline-block;
+  width: 292px;
+  height: 17px;
+}
+.profile-inner,
+.profile-item {
+  position: absolute;
+  top: 293px;
+  left: 592px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 772px;
+  height: 46px;
+}
+.profile-inner {
+  top: 391px;
+  height: 44px;
+}
+.div {
+  position: absolute;
+  top: 405px;
+  left: 629px;
+  font-weight: 200;
+  display: inline-block;
+  width: 347px;
+  height: 15px;
+}
+.profile-child1,
+.rectangle-div {
+  position: absolute;
+  top: 479px;
+  left: 871px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 227px;
+  height: 46px;
+}
+.profile-child1 {
+  left: 592px;
+  width: 226px;
+}
+.april {
+  position: absolute;
+  top: 495px;
+  left: 916px;
+  font-weight: 200;
+  display: inline-block;
+  width: 60px;
+  height: 16px;
+}
+.profile-child2 {
+  position: absolute;
+  top: 479px;
+  left: 1136px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 226px;
+  height: 46px;
+}
+.div1,
+.istian {
+  position: absolute;
+  top: 492px;
+  left: 1177px;
+  font-weight: 200;
+  display: inline-block;
+  width: 70px;
+  height: 16px;
+}
+.istian {
+  top: 306px;
+  left: 624px;
+  width: 291px;
+  height: 19px;
+}
+.group-icon,
+.profile-child3 {
+  position: absolute;
+  top: 500.78px;
+  left: 775.88px;
+  width: 16.45px;
+  height: 5.49px;
+}
+.profile-child3 {
+  top: 480.14px;
+  left: 1057.49px;
+  width: 290.39px;
+  height: 46.65px;
+}
+.profile-child4 {
+  top: 197px;
+  left: 275px;
+  width: 239px;
+  height: 236px;
+}
+.div2,
+.profile-child4,
+.profile1 {
+  position: absolute;
+}
+.div2 {
+  top: 495px;
+  left: 622px;
+  font-weight: 200;
+  display: inline-block;
+  width: 31px;
+  height: 16px;
+}
+.profile1 {
+  top: 59px;
+  left: 1196px;
+  font-size: 48px;
+  font-family: var(--font-clarendon);
+}
+.confirm-password,
+.date-of-birth,
+.email,
+.new-password {
+  position: absolute;
+  top: 449px;
+  left: 592px;
+  font-size: var(--font-size-lg);
+  font-weight: 300;
+  display: inline-block;
+  width: 117px;
+  height: 24px;
+}
+.confirm-password,
+.email,
+.new-password {
+  top: 548px;
+  width: 53px;
+  height: 22px;
+}
+.confirm-password,
+.new-password {
+  top: 640px;
+  font-size: var(--font-size-xl);
+  width: 164px;
+}
+.confirm-password {
+  top: 732px;
+  width: 200px;
+  height: 24px;
+}
+.email-input{
+  position: absolute;
+  top: 577px;
+  left: 592px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 770px;
+  height: 48px;
+}
+.jedithistiangmailcom {
+  position: absolute;
+  top: 592px;
+  left: 622px;
+  font-weight: 200;
+  display: inline-block;
+  width: 191px;
+  height: 17px;
+}
+.profile-child6,
+.profile-child7 {
+  position: absolute;
+  top: 670px;
+  left: 592px;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  border: 0.5px solid var(--color-black);
+  box-sizing: border-box;
+  width: 770px;
+  height: 48px;
+}
+.profile-child7 {
+  top: 762px;
+  height: 49px;
+}
+.enter-your-confirm {
+  position: absolute;
+  top: 777px;
+  left: 622px;
+  font-weight: 200;
+  display: inline-block;
+  width: 236px;
+  height: 19px;
+}
+.group-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-8xs);
+  width: 254px;
+  height: 48.4px;
+}
+.save-changes {
+  position: absolute;
+  top: 14px;
+  left: 69px;
+  font-weight: 600;
+  display: inline-block;
+  width: 115px;
+  height: 19px;
+}
+.vector-parent {
+  position: absolute;
+  top: 770px;
+  left: 267px;
+  width: 254px;
+  height: 48.4px;
+  font-size: 16px;
+  color: var(--color-white);
+}
+.enter-your-new {
+  position: absolute;
+  top: 685px;
+  left: 622px;
+  font-weight: 200;
+  display: inline-block;
+  width: 210px;
+  height: 18px;
+}
+.group-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  background-color: #ffee4c;
+  width: 251px;
+  height: 126px;
+}
+.hasil-tes-terakhir {
+  position: absolute;
+  top: 24px;
+  left: 30px;
+  display: inline-block;
+  width: 191px;
+  height: 18px;
+}
+.sedang {
+  position: absolute;
+  top: 59px;
+  left: 30px;
+  font-size: 40px;
+}
+.lakukan-tes-untuk {
+  position: absolute;
+  top: 136px;
+  left: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--font-open-sans);
+  color: #de0000;
+  display: inline-block;
+  width: 224px;
+  height: 39px;
+}
+.rectangle-parent {
+  position: absolute;
+  top: 479px;
+  left: 268px;
+  width: 251px;
+  height: 175px;
+  font-size: var(--font-size-xl);
+  font-family: var(--font-clarendon);
+}
+.group-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 var(--br-11xl) var(--br-11xl) 0;
+  background-color: #48904f;
+  width: 196px;
+  height: 1004px;
+}
+.image-10-icon,
+.image-7-icon {
+  position: absolute;
+  top: 874px;
+  left: 60px;
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+.image-10-icon {
+  top: 85px;
+  left: 58px;
+  border-radius: 960px;
+  width: 81px;
+  height: 81px;
+}
+.chatbot {
+  position: absolute;
+  top: 83px;
+  left: 16px;
+  font-weight: 500;
+}
+.icon-chatbot-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  width: 80px;
+  height: 80px;
+}
+.chatbot-1-1 {
+  position: absolute;
+  top: 0;
+  left: 3px;
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+}
+.icon-chatbot {
+  position: absolute;
+  top: 259px;
+  left: 59px;
+  width: 80px;
+  height: 98px;
+}
+.tes-psikologi {
+  position: absolute;
+  top: 83px;
+  left: 3px;
+  font-weight: 500;
+}
+.icons8-test-96-1-1 {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 70px;
+  height: 74px;
+  object-fit: cover;
+}
+.rectangle-group,
+.tes-psikolog {
+  position: absolute;
+  top: 404px;
+  left: 59px;
+  width: 80px;
+  height: 98px;
+}
+.rectangle-group {
+  top: 0;
+  left: 0;
+  width: 196px;
+  height: 1004px;
+}
+.username {
+  position: absolute;
+  top: 166px;
+  left: 61px;
+  font-size: var(--font-size-mini);
+  font-weight: 600;
+  font-family: var(--font-open-sans);
+}
+.navbar {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 196px;
+  height: 1008px;
+  overflow: hidden;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+}
+.profile {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

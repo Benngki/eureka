@@ -31,6 +31,7 @@
         }
     </style>
     <link rel="stylesheet" href="./HomeTest.css" />
+    <link rel="stylesheet" href="{{ asset('CSS/main.css') }}">
 
 </head>
 

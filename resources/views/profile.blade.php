@@ -27,14 +27,24 @@
             width: fit-content;
         }
 
-        #profile_pict .picture {
-            width: 8rem;
-            height: 8rem;
-        }
 
         #profile_pict .pencil {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 2.5vw;
+            height: 2.5vw;
+            border: none;
+        }
+
+        #profile_pict .picture {
+            border-radius: 50%;
+            /* Ini akan membuat gambar menjadi lingkaran */
+            width: 9vw;
+            /* Sesuaikan lebar sesuai kebutuhan Anda */
+            height: 9vw;
+            /* Sesuaikan tinggi sesuai kebutuhan Anda */
+            object-fit: cover;
+            /* Untuk memastikan gambar sesuai dengan lingkaran tanpa distorsi */
+            border: solid;
+            border-width: 3px
         }
 
         p {
@@ -44,23 +54,26 @@
 @endpush
 
 @push('css')
-    <link rel="stylesheet" href="{{asset('CSS/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('CSS/main.css') }}">
 @endpush
 
 @section('sidebar-main')
     <h1 class="text-end m-4 mfont-clarendon fw-bold">
-        Profile
+        Profile.
     </h1>
 
-    <form action="#">
+    <form action="#" class="mt-4">
         <div class="container">
             <div class="row gx-5 pb-4">
                 <div class="col-3 d-flex flex-column align-items-center">
                     <div id="profile_pict">
-                        <img class="picture" src="{{ asset('img/avatar.png') }}">
-                        <button type="button" class="btn position-absolute bottom-0 end-0">
+                        <button type="button" class="btn position-absolute bottom-0 end-0" style="border: none"
+                            id="button-upload">
                             <img class="pencil position-absolute bottom-0 end-0" src="{{ asset('img/pencil.png') }}">
+                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
                         </button>
+                        <div id="image-container"><img class="picture" src="{{ asset('img/avatar.png') }}"></div>
+
                     </div>
 
                     <div style="background-color: #FFEE4C" class="px-4 py-2 my-3 rounded-4">
@@ -72,10 +85,6 @@
                     <small class="text-danger mtext-justify">
                         *Lakukan tes untuk update tingkat stress anda
                     </small>
-
-                    <button type="submit" class="btn btn-success align-self-stretch mt-5">
-                        Save Changes
-                    </button>
 
                 </div>
                 <div class="col text-start">
@@ -126,19 +135,48 @@
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control border-3" id="email" required>
                     </div>
-                    {{-- new password --}}
-                    <div class="mb-1">
-                        <label for="newPassword" class="form-label">New Password</label>
-                        <input type="password" class="form-control border-3" id="newPassword">
-                    </div>
-                    {{-- confirm password --}}
-                    <div class="mb-1">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control border-3" id="confirmPassword">
+                    <div class="row">
+                        <div class="col-4 d-flex  ">
+                            <button type="submit" class="btn btn-success mt-4 flex-fill">
+                                Save Changes
+                            </button>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
     </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fileInput = document.getElementById("fileInput");
+            const button = document.querySelector("#button-upload");
+            const imageContainer = document.getElementById("image-container");
+
+            button.addEventListener("click", function() {
+                fileInput.click();
+            });
+
+            fileInput.addEventListener("change", function() {
+                const selectedFile = fileInput.files[0];
+
+                if (selectedFile) {
+                    // Buat elemen gambar baru dan atur atribut src-nya untuk menampilkan gambar yang dipilih.
+                    const image = document.createElement("img");
+                    image.src = URL.createObjectURL(selectedFile);
+                    image.classList.add(
+                    "picture"); // Tambahkan kelas "picture" untuk mengikuti gaya lingkaran
+
+                    // Kosongkan kontainer gambar sebelum menambahkan gambar yang baru diunggah.
+                    imageContainer.innerHTML = '';
+
+                    // Tambahkan elemen gambar ke kontainer gambar di halaman.
+                    imageContainer.appendChild(image);
+
+                    // Di sini Anda dapat mengirimkan gambar ke server atau melakukan tindakan lain sesuai kebutuhan Anda.
+                    console.log("Anda telah memilih file:", selectedFile.name);
+                }
+            });
+        });
+    </script>
 @endsection

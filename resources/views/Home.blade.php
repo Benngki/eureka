@@ -107,7 +107,6 @@
                     <p class="card-text ">2,6 persen yang mengakses layanan konseling, baik emosi maupun perilaku.</p> 
                 </div>
             </div>
-
         </div>
 
         <div id='services' class="container-fluid d-flex justify-content-center py-5 mt-5">
@@ -247,7 +246,6 @@
           <div class="d-flex justify-content-start">
             <a class="me-3" href=""><img  src="{{asset('img/IG.svg')}}" alt=""></a>
             <a href=""><img src="{{asset('img/WA.svg')}}" alt=""></a>
-            <a class="ms-3" href=""><img  src="{{asset('img/Twitter.svg')}}" alt=""></a>
           </div>
         </div>
       </div>

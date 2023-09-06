@@ -18,7 +18,7 @@
         <p class="m-0">Test</p>
     </a>
 
-    <a href="#" class="btn mt-auto mb-5 mx-auto" role="button" style="width: 60%">
+    <a href="{{ route('home') }}" class="btn mt-auto mb-5 mx-auto" role="button" style="width: 60%">
         <img class="w-100" src="{{ asset('img/home.png') }}">
     </a>
 </div>

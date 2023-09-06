@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./CSS/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -18,9 +18,9 @@
 
 <body class="min-vh-100 d-flex align-items-center">
     <div class="container my-auto ">
-        <div class="d-flex justify-content-center">
+        <a href="{{ route('home') }}" class="d-flex justify-content-center">
             <img style="max-width: 25%;" src="{{ asset('img/logo.svg') }}" alt="Logo Dialog Diri">
-        </div>
+        </a>
 
         <div class="d-flex justify-content-center mt-5">
             <img style="max-width: 100%" src="{{ asset('img/Gambasr_login.png') }}" alt="">
@@ -53,8 +53,8 @@
             </div>
         </div>
     </div>
-
-
+    
+    {{-- <div class="g-signin2" data-onsuccess="onSignIn"></div> --}}
 
 
 
@@ -78,7 +78,7 @@
         });
     </script>
 
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">

@@ -1,8 +1,6 @@
 <?php
 
-use App\Livewire\Chatbot;
 use App\Livewire\Counter;
-use App\Livewire\Profile;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,27 +17,29 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/chatbot', function () {
     return view('chatbot');
-});
+})->name('chatbot');
 
 Route::get('/profile', function () {
     return view('profile');
+})->name('profile');    
+
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', function () {
+        return view('Login');
+    })->name('login');
+    
+    Route::get('/register', function () {
+        return view('Register');
+    });
+    
+    Route::get('/forgot-password', function () {
+        return view('ForgotPassword');
+    });
 });
 
-Route::get('/', function () {
+Route::get('/test', function () {
     return view('HomeTest');
-});
-
-Route::get('/login', function () {
-    return view('Login');
-});
-
-Route::get('/register', function () {
-    return view('Register');
-});
-
-Route::get('/forgot-password', function () {
-    return view('ForgotPassword');
-});
+})->name('test');
 
 Route::get('/HasilTest1', function () {
     return view('HasilTest1');

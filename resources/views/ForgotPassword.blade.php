@@ -29,7 +29,7 @@
                 <div class="Dpa">
                     <p>
                         Don’t have an account?
-                        <a href="/register" class="singup" style="font-family: 'Open Sans', sans-serif;" >
+                        <a wire:navigate href="/register" class="singup" style="font-family: 'Open Sans', sans-serif;" >
                             Sign Up Here
                         </a>
                     </p>

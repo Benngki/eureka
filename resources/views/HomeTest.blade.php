@@ -24,7 +24,8 @@
       font-family: 'Open Sans';
     }
     </style>
-    <link rel="stylesheet" href="./HomeTest.css" />
+    <link rel="stylesheet" href="{{ asset('HomeTest.css') }}" />
+    <link rel="stylesheet" href="{{ asset('CSS/main.css') }}">
     
 </head>
 
@@ -44,7 +45,7 @@
                                 <h1 class="TMD text-center">
                                     Test Mengenal Diri
                                 </h1>
-                                <div class="Opensans Test1 ">
+                                <div class="Opensans Test1">
                                     <p>
                                         Tes ini ditujukan untuk mengenal diri anda lebih dalam dan mengukur tingkat stress pada diri
                                         sendiri

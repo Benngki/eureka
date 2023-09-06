@@ -1,0 +1,8 @@
+:root {
+    --primary-color: #48904F;
+}
+
+#sidebar {
+    background-color: var(--primary-color); 
+    position: fixed;
+}

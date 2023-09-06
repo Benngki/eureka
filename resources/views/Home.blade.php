@@ -108,7 +108,7 @@
             <h2 class="js-scroll slide-right" >Masalah kesehatan mental meningkat hingga 300 juta orang seluruh dunia menderita gangguan kecemasan hingga depresi</h2>
             <p class="js-scroll slide-right2" >“Aku menemukan bahwa dengan depresi, salah satu hal terpenting yang dapat kamu sadari adalah bahwa kamu tidak sendiri. Kamu bukan yang pertama melewatinya. Kamu juga tidak akan menjadi yang terakhir melewatinya.”<br><i>Dwayne “The Rock” Johnson.</i> </p>
             <div style="text-align: center;">
-              <button type="button" class="btn rounded-5 Buttonhover" style="padding-left: 6rem;padding-right: 6rem; background: #48904F; color: white;">Mulai Test</button>
+              <a href="{{ route('test') }}" type="button" class="btn rounded-5 Buttonhover" style="padding-left: 6rem;padding-right: 6rem; background: #48904F; color: white;">Mulai Test</a>
             </div>
           </div>
         </div>

@@ -25,15 +25,15 @@ Route::get('/profile', function () {
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', function () {
-        return view('Login');
+        return view('guest/Login');
     })->name('login');
     
     Route::get('/register', function () {
-        return view('Register');
+        return view('guest/Register');
     });
     
     Route::get('/forgot-password', function () {
-        return view('ForgotPassword');
+        return view('guest/ForgotPassword');
     });
 });
 

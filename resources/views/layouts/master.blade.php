@@ -31,7 +31,7 @@
 
                     {{-- start of content --}}
                     
-                    <div class="col-11 offset-1 d-flex flex-column min-vh-100">
+                    <div class="col-11 offset-1 d-flex flex-column min-vh-100 @yield('main-class')">
 
                         @yield('sidebar-main')
                     </div>

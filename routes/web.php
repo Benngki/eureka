@@ -20,7 +20,7 @@ Route::get('/', function (){
 
 
 Route::get('/chatbot', function () {
-    return view('chatbot');
+    return view('features\chatbot');
 })->name('chatbot');
 
 Route::get('/profile', function () {
@@ -42,34 +42,33 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/ResetPassword', function () {
         return view('guest/ChangePassword');
     });
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/test', function () {
+        return view('HomeTest');
+    })->name('test');
     
+    Route::get('/HasilTest1', function () {
+        return view('HasilTest1');
+    });
+    
+    Route::get('/HasilTest2', function () {
+        return view('HasilTest2');
+    });
+    
+    Route::get('/HasilTest3', function () {
+        return view('HasilTest3');
+    });
+    
+    Route::get('/HasilTest4', function () {
+        return view('HasilTest4');
+    });
+    
+    Route::get('/TesPsikolog', function () {
+        return view('TesPsikolog');
+    });
 });
-
-Route::get('/test', function () {
-    return view('HomeTest');
-})->name('test');
-
-Route::get('/HasilTest1', function () {
-    return view('HasilTest1');
-});
-
-Route::get('/HasilTest2', function () {
-    return view('HasilTest2');
-});
-
-Route::get('/HasilTest3', function () {
-    return view('HasilTest3');
-});
-
-Route::get('/HasilTest4', function () {
-    return view('HasilTest4');
-});
-
-Route::get('/TesPsikolog', function () {
-    return view('TesPsikolog');
-});
-
-
 
 // Livewire
 Route::get('/counter', Counter::class);

@@ -18,18 +18,18 @@
           
             <ul class="navbar-nav justify-content-end nav-fill nav-underline align-items-baseline">
               <li class="nav-item">
-                <a class="nav-link active linkNav" aria-current="page" href="#">Home</a>
+                <a class="nav-link active linkNav" aria-current="page" href="#">Beranda</a>
               </li>
               <li class="nav-item">
                 <a wire:navigate class="nav-link linkNav" href="{{ route('chatbot') }}">Chatbot</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link linkNav" href="#">About Us</a>
+                <a class="nav-link linkNav" href="#services">Layanan</a>
               </li>
               <li class="nav-item me-5">
-                <a class="nav-link linkNav" href="#">Contact</a>
+                <a class="nav-link linkNav" href="#kontak">Kontak</a>
               </li>
-              <a wire:navigate href="{{ route('login') }}" role="button" type="button" class="btn me-5" ><img class="mx-1"  src="{{asset('img/profile.png')}}" alt="">Login</a>
+              <a wire:navigate href="{{ route('login') }}" role="button" type="button" class="btn me-5" ><img class="mx-1"  src="{{asset('img/profile.png')}}" alt="">Masuk</a>
             </ul>
         </div>
       </nav>
@@ -76,7 +76,7 @@
 
         </div>
 
-        <div class="container-fluid d-flex justify-content-center py-5 mt-5">
+        <div id='services' class="container-fluid d-flex justify-content-center py-5 mt-5">
           <div class="card text-center mb-3 rounded-4" style="width: 90vw; background-color: #FCF4F0;">
             <div class="card-body ">
               <h2 class="card-title fw-bolder mt-3">Layanan Kami</h2>
@@ -203,7 +203,7 @@
 
       <div class="mt-5 container-fluid bg-danger d-flex justify-content-center"><p style="margin:0px;color: white; "><b>Peringatan</b><i> jika Anda sedang mengalami krisis psikologis yang mengancam hidup Anda, layanan ini tidak direkomendasikan untuk Anda. Silahkan menghubungi 119</i></p></div>
 
-      <div class="container-fluid d-flex justify-content-between p-5" style="background-color: #A3C7A7;">
+      <div id='kontak' class="container-fluid d-flex justify-content-between p-5" style="background-color: #A3C7A7;">
         <div style="width: 40vw;">
           <img class="mb-3"  src="{{asset('img/logo.svg')}}" alt="">
           <p>DialogDiri adalah sebuah platform daring yang bertujuan untuk memberikan dukungan dan bantuan bagi individu yang mengalami tantangan kesehatan mental. Platform ini dirancang untuk menciptakan ruang aman bagi penggunanya untuk berbicara tentang perasaan, emosi, dan pengalaman yang terkait dengan kesehatan mental mereka.</p>

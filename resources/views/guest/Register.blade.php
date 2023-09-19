@@ -32,8 +32,9 @@
                 <h3 style="font-family: 'Clarendon';">Register</h3>
                 <p style="font-family: 'Open Sans', sans-serif;">Already have an account?<a wire:navigate
                         href="/login"> Login Here</a></p>
-                <form method="post" action="/Register.blade.php">
-                    <input type="text" class="form-control mb-3" id="UsernameInput" placeholder="Username" required>
+                <form method="POST" action="{{ route('registerNewUser') }}">
+                    @csrf
+                    {{-- <input type="text" class="form-control mb-3" id="UsernameInput" placeholder="Username" required>
                     <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com"
                         required>
                     <div class="d-flex justify-content-end">
@@ -46,7 +47,7 @@
                         <input type="password" name="password" class="form-control mb-3" id="PasswordInput2"
                             placeholder="Confirm Password" maxlength="20">
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword2"></i>
-                    </div>
+                    </div> --}}
                     <button type="submit" class="btn btnLogin w-100 mb-3"
                         style="font-family: 'Open Sans', sans-serif;">Register</button>
                 </form>

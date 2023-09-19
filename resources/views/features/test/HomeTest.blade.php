@@ -69,7 +69,7 @@
                           <p class="m-0 Opensans "> 2. Tidak ada jawaban salah/benar </p>
                           <p class="Opensans "> 3. jawab sesuai dengan keadaanmu saat ini </p>
                       </div>
-                      <button type="button" class="boti btn btn-success TMD mt-5 " style="border-radius:100px">Mulai</button>
+                      <a href="{{route('soal-test')}}" role="button" class="boti btn btn-success TMD mt-5 " style="border-radius:100px">Mulai</a>
                     </div>
                 </div>
             </div>

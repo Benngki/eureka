@@ -78,7 +78,7 @@
                             aria-valuemin="0" aria-valuemax="100" style="width: 100%">
                             <div class="progress-bar" style="width: 20% ; "></div>
                         </div>
-                        <p class="title mt-4">Kamu lebih suka sosialisasi atau bergaul ?</p>
+                        <p class="title mt-4">{{$tests->last()->soal }}</p>
                         <div class="content">
                             <input type="radio" name="rd" id="one">
                             <input type="radio" name="rd" id="two">
@@ -87,25 +87,25 @@
                             <label for="one" class="box first">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">Saya ingin menghindar</span>
+                                    <span class="yearly">{{$tests->last()->jawaban1 }}</span>
                                 </div>
                             </label>
                             <label for="two" class="box second">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">Saya senang sendiri </span>
+                                    <span class="yearly">{{$tests->last()->jawaban2 }}</span>
                                 </div>
                             </label>
                             <label for="three" class="box third">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">Ya, Saya senang sosialisasi</span>
+                                    <span class="yearly">{{$tests->last()->jawaban3 }}</span>
                                 </div>
                             </label>
                             <label for="four" class="box fourw">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">Ya, jika dengan orang yang saya kenal </span>
+                                    <span class="yearly">{{$tests->last()->jawaban4 }}</span>
                             </label>
                         </div>
                     </div>

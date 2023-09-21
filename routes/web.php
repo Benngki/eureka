@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Livewire\Counter;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
@@ -88,3 +89,4 @@ Route::middleware(['auth'])->group(function () {
 
 // Livewire
 Route::get('/counter', Counter::class);
+Route::post('/profile/store', [ProfileController::class,'store']);

@@ -62,7 +62,8 @@
         Profile.
     </h1>
 
-    <form action="#" class="mt-4">
+    <form action="/profile/store" class="mt-4" method="POST">
+        @csrf
         <div class="container">
             <div class="row gx-5 pb-4">
                 <div class="col-3 d-flex flex-column align-items-center">
@@ -70,7 +71,7 @@
                         <button type="button" class="btn position-absolute bottom-0 end-0" style="border: none"
                             id="button-upload">
                             <img class="pencil position-absolute bottom-0 end-0" src="{{ asset('img/pencil.png') }}">
-                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                            <input type="file" id="fileInput" accept="image/*" style="display: none;" name="image">
                         </button>
                         <div id="image-container"><img class="picture" src="{{ asset('img/avatar.png') }}"></div>
 
@@ -92,17 +93,17 @@
                     {{-- first name --}}
                     <div class="mb-1">
                         <label for="firstName" class="form-label">First Name</label>
-                        <input type="name" class="form-control border-3" id="firstName" required>
+                        <input name="firstName" type="text" class="form-control border-3" id="firstName" required >
                     </div>
                     {{-- last name --}}
                     <div class="mb-1">
                         <label for="lastName" class="form-label">Last Name</label>
-                        <input type="name" class="form-control border-3" id="lastName" required>
+                        <input name= "lastName" type="text" class="form-control border-3" id="lastName" required>
                     </div>
                     {{-- phone number --}}
                     <div class="mb-1">
                         <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control border-3" id="phoneNumber" required>
+                        <input  name= "phoneNumber" type="text" class="form-control border-3" id="phoneNumber" required>
                     </div>
                     {{-- date of birth --}}
                     <div class="mb-1">
@@ -110,9 +111,9 @@
 
                         <div class="d-flex">
                             {{-- tanggal --}}
-                            <input type="number" class="form-control border-3 me-3" id="birthDay" required>
+                            <input name= "tanggal" type="number" class="form-control border-3 me-3" id="birthDay" required>
                             {{-- bulan --}}
-                            <select class="form-select me-3 border-3" id="birthMonth">
+                            <select name="bulan" class="form-control me-3 border-3" id="birthMonth">
                                 <option value="January" selected>January</option>
                                 <option value="February">February</option>
                                 <option value="March">March</option>
@@ -127,13 +128,13 @@
                                 <option value="December">December</option>
                             </select>
                             {{-- tahun --}}
-                            <input type="number" class="form-control border-3" id="birthYear" required>
+                            <input name="tahun" type="number" class="form-control border-3" id="birthYear" required>
                         </div>
                     </div>
                     {{-- email --}}
                     <div class="mb-1">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control border-3" id="email" required>
+                        <input name="email" type="email" class="form-control border-3" id="email" required>
                     </div>
                     <div class="row">
                         <div class="col-4 d-flex  ">

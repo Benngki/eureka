@@ -2,6 +2,7 @@
 
 use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +33,12 @@ Route::middleware(['guest'])->group(function () {
         return view('guest/Login');
     })->name('login');
     
+    // Register
     Route::get('/register', function () {
         return view('guest/Register');
     });
+
+    Route::post('/register', [RegisterController::class, 'registerNewUser'])->name('registerNewUser');
     
     Route::get('/forgot-password', function () {
         return view('guest/ForgotPassword');
@@ -44,30 +48,30 @@ Route::middleware(['guest'])->group(function () {
     });
 });
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['guest'])->group(function () {
     Route::get('/test', function () {
-        return view('HomeTest');
+        return view('features/test/HomeTest');
     })->name('test');
     
     Route::get('/HasilTest1', function () {
-        return view('HasilTest1');
+        return view('features/test/HasilTest1');
     });
     
     Route::get('/HasilTest2', function () {
-        return view('HasilTest2');
+        return view('features/test/HasilTest2');
     });
     
     Route::get('/HasilTest3', function () {
-        return view('HasilTest3');
+        return view('features/test/HasilTest3');
     });
     
     Route::get('/HasilTest4', function () {
-        return view('HasilTest4');
+        return view('features/test/HasilTest4');
     });
     
     Route::get('/TesPsikolog', function () {
-        return view('TesPsikolog');
-    });
+        return view('features/test/TesPsikolog');
+    })->name('soal-test');
 });
 
 // Livewire

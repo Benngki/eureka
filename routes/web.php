@@ -40,6 +40,7 @@ Route::middleware(['guest'])->group(function () {
 
     Route::post('/register', [RegisterController::class, 'registerNewUser'])->name('registerNewUser');
     
+    
     Route::get('/forgot-password', function () {
         return view('guest/ForgotPassword');
     });

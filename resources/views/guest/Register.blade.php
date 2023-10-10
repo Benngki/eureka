@@ -32,25 +32,27 @@
                 <h3 style="font-family: 'Clarendon';">Register</h3>
                 <p style="font-family: 'Open Sans', sans-serif;">Already have an account?<a wire:navigate
                         href="/login"> Login Here</a></p>
-                <form method="POST" action="{{ route('registerNewUser') }}">
+                <form method="post" action="{{ route('registerNewUser') }}">
                     @csrf
-                    {{-- <input type="text" class="form-control mb-3" id="UsernameInput" placeholder="Username" required>
-                    <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com"
-                        required>
+                    <input name="UsernameInput" type="text" class="form-control mb-3" id="UsernameInput" placeholder="Username" autofocus required>
+                    <input name="EmailInput" type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com" autofocus required >
                     <div class="d-flex justify-content-end">
                         <input type="password" name="password" class="form-control mb-3" id="PasswordInput"
                             placeholder="Password" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                            required>
+                            autofocus required>
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword"></i>
                     </div>
                     <div class="d-flex justify-content-end">
-                        <input type="password" name="password" class="form-control mb-3" id="PasswordInput2"
+                        <input type="password" name="Confirmpassword" class="form-control mb-3" id="PasswordInput2"
                             placeholder="Confirm Password" maxlength="20">
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword2"></i>
-                    </div> --}}
+                    </div>
+                    {{-- <button type="submit">register</button> --}}
                     <button type="submit" class="btn btnLogin w-100 mb-3"
                         style="font-family: 'Open Sans', sans-serif;">Register</button>
                 </form>
+
+                
 
                 <div class="p-3" id="message">
                     <p>Password must contain the following:</p>
@@ -178,11 +180,7 @@
             this.classList.toggle("bi-eye");
         });
 
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-        });
+        
     </script>
     <script>
         const togglePassword2 = document.querySelector("#togglePassword2");

@@ -21,11 +21,20 @@
         <a href="{{ route('home') }}" class="d-flex justify-content-center">
             <img style="max-width: 25%;" src="{{ asset('img/logo.svg') }}" alt="Logo Dialog Diri">
         </a>
-
+       
         <div class="d-flex justify-content-center mt-5">
             <img style="max-width: 100%" src="{{ asset('img/Gambasr_login.png') }}" alt="">
             <div>
                 <h3 style="font-family: 'Clarendon';">Login</h3>
+
+                @if (session()->has('success'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        
+                        {{session('success')}}
+                    </div>
+                @endif  
+                
+
                 <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?
                     <a wire:navigate href="/register"> Sign Up Here</a>
                 </p>

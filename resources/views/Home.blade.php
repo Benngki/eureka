@@ -10,6 +10,7 @@
     @livewireStyles
 </head>
 <body>
+  <header>
     <nav class="navbar navbar-expand-lg bg-body-secondary">
         <div class="container-fluid">
           <a class="navbar-brand ms-5" href="#">
@@ -33,7 +34,9 @@
             </ul>
         </div>
       </nav>
+    </header>
 
+    <main></main>
       <div class="container-fluid overflow-hidden" style="margin-bottom: 8rem;">
         <div class="d-flex justify-content-evenly align-items-center">
             <div style="width: 20vw;">

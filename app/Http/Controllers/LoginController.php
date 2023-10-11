@@ -41,7 +41,9 @@ class LoginController extends Controller
         $user = User::where('EmailInput', $request->EmailInput)->first();
 
         if (!$user) {
-            return back()->with('loginError','Login failed!');
+            return back()->withErrors([
+                'loginError' => 'The provided email is not registered.',
+            ])->withInput();
         }
 
         $credentials = [
@@ -52,9 +54,9 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
  
-            return redirect()->intended('/dashboard');
+            return redirect()->intended('/');
         } 
+        return redirect()->back()->with('loginError','Login failed!');
 
-        return back()->with('loginError','Login failed!');
     }
 }

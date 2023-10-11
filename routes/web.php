@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Counter;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -20,14 +21,19 @@ Route::get('/', function (){
     return view('Home');
 })->name('home');
 
-
+// chatbot
 Route::get('/chatbot', function () {
-    return view('features\chatbot');
+    return view('features.chatbot');
 })->name('chatbot');
+
+Route::get('/chatbot/{chat}', [Controller::class, 'chatbot'])->name('chat');
+// Route::get('/chatbot/{chat}', function (){
+//     return 'hello';
+// })->name('chat');
 
 Route::get('/profile', function () {
     return view('profile');
-})->name('profile');    
+})->name('profile');
 
 Route::middleware(['guest'])->group(function () {
     //Login

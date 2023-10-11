@@ -21,6 +21,68 @@
 @push('js')
     <script>
         const textarea = document.querySelector('textarea#input_message');
+
+        function getCurrentTime() {
+            var today = new Date();
+
+            if (today.getMinutes() < 10){
+                var time = today.getHours() + ":0" + today.getMinutes(); 
+            }else{
+                var time = today.getHours() + ":" + today.getMinutes(); 
+            }
+            return time
+        }
+
+        function addBotMessage(response, bold=false) {
+            if (bold){
+                $("#messages").append(
+                    `
+            <div class="d-flex my-2">
+                <img class="m-2" width="50" height="50"
+                    src="{{ asset('img/bot-logo.png') }}" alt="">
+
+                <div style="background-color: #FCF4F0" class="message p-3 rounded-4">
+                    <p class="text text-start m-0 fw-bold">${response}</p>
+                    <p class="time text-end fw-bold m-0">${getCurrentTime()}</p>
+                </div>
+            </div>`
+
+                );
+            }else{
+                $("#messages").append(
+                    `
+            <div class="d-flex my-2">
+                <img class="m-2" width="50" height="50"
+                    src="{{ asset('img/bot-logo.png') }}" alt="">
+
+                <div style="background-color: #FCF4F0" class="message p-3 rounded-4">
+                    <p class="text text-start m-0">${response}</p>
+                    <p class="time text-end fw-bold m-0">${getCurrentTime()}</p>
+                </div>
+            </div>`
+
+                );
+            }
+        }
+
+        function addUserMessage(message) {
+            $("#messages").append(
+
+                    `<div style="background-color: #00B112" class="message p-3 my-2 rounded-4 align-self-end">
+                <p class="text text-start m-0">` + message + `</p>
+                <p class="time text-end fw-bold m-0">${getCurrentTime()}</p>
+            </div>`
+            );
+        }
+
+        function scrollToBottom() {
+            // fixed scroll bottom
+            var messages = document.querySelector('#messages');
+
+            // alert(messages.scrollTop);
+            messages.scrollTop = messages.scrollHeight - messages.clientHeight;
+        }
+
         $(document).ready(function() {
             $("#input_message").keydown(function(e) {
                 textarea.style.height = `100%`;
@@ -38,42 +100,27 @@
                 let scHeight = e.target.scrollHeight;
                 textarea.style.height = `${scHeight}px`;
             });
+
+            addBotMessage("Gunakan bahasa inggris untuk berinteraksi dengan chatbot!", true);
+            addBotMessage("I'm Eureka bot, ready to help you");
         });
+        
 
         function send() {
 
             if ($('#input_message').val() != "") {
                 const val = $('#input_message').val().trim().replaceAll("\n", '<br>');
-                $("#messages").append(
-
-                    `<div style="background-color: #00B112" class="message p-3 my-2 rounded-4 align-self-end">
-                <p class="text text-start m-0">` + val + `</p>
-                <p class="time text-end fw-bold m-0">18.44</p>
-            </div>` +
-                    `
-            <div class="d-flex my-2">
-                <img class="m-2" width="30" height="30"
-                    src="{{ asset('img/lingkaran_hitam.png') }}" alt="">
-
-                <div style="background-color: #FCF4F0" class="message p-3 rounded-4">
-                    <p class="text text-start m-0">Saya dialogBot siap membantu anda!</p>
-                    <p class="time text-end fw-bold m-0">18.44</p>
-                </div>
-            </div>`
-
-                );
-
-
-                // fixed scroll bottom
-                var messages = document.querySelector('#messages');
-
-                // alert(messages.scrollTop);
-
-                messages.scrollTop = messages.scrollHeight - messages.clientHeight;
-
-
+                
+                addUserMessage(val);
                 // mengoo
                 $('#input_message').val('');
+
+                $.get(`/chatbot/${val}`, 
+                    function (response) {
+                        addBotMessage(response);   
+                        scrollToBottom();
+                    }
+                );
             }
         }
     </script>
@@ -87,29 +134,6 @@
     </h1>
 
     <div id="messages" class="d-flex flex-column flex-fill pe-2 overflow-auto h-100">
-
-        <div class="d-flex my-2">
-            <img class="m-2" width="30" height="30" src="{{ asset('img/lingkaran_hitam.png') }}" alt="">
-
-            <div style="background-color: #FCF4F0" class="message p-3 rounded-4">
-                <p class="text text-start m-0">Halo, Selamat datang!</p>
-                <p class="time text-end fw-bold m-0">18.44</p>
-            </div>
-        </div>
-
-        <div style="background-color: #00B112" class="message p-3 my-2 rounded-4 align-self-end">
-            <p class="text text-start m-0">Saya ingin konsultasi</p>
-            <p class="time text-end fw-bold m-0">18.44</p>
-        </div>
-
-        <div class="d-flex my-2">
-            <img class="m-2" width="30" height="30" src="{{ asset('img/lingkaran_hitam.png') }}" alt="">
-
-            <div style="background-color: #FCF4F0" class="message p-3 rounded-4">
-                <p class="text text-start m-0">Saya dialogBot siap membantu anda!</p>
-                <p class="time text-end fw-bold m-0">18.44</p>
-            </div>
-        </div>
     </div>
 
 

@@ -45,7 +45,7 @@
                 Berani berbicara dan terbuka terhadap permasalahan mental yang ada pada diri sendiri untuk menerima  dan memberikan kesempatan berkembang dan tumbuh secara pribadi yang lebih baik dan positif. 
                 <br><br>Mulailah bercerita tentang diri anda sekarang!<br>
               </div>
-                <button type="button" class="btn rounded-5 btn-lg px-5 mt-5 Buttonhover" style="background: #48904F; color: white;">Mulai</button>
+                <a href="{{route('chatbot')}}" role="button" class="btn rounded-5 btn-lg px-5 mt-5 Buttonhover" style="background: #48904F; color: white;">Mulai</a>
             </div>
             <img class="animationGmbr1" data-aos="fade-left" style="min-width: 40%;"  src="{{asset('img/Home1.png')}}" alt="">
         </div>

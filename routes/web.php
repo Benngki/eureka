@@ -21,12 +21,6 @@ Route::get('/', function (){
     return view('Home');
 })->name('home');
 
-// chatbot
-Route::get('/chatbot', function () {
-    return view('features.chatbot');
-})->name('chatbot');
-
-Route::get('/chatbot/{chat}', [Controller::class, 'chatbot'])->name('chat');
 // Route::get('/chatbot/{chat}', function (){
 //     return 'hello';
 // })->name('chat');
@@ -59,7 +53,14 @@ Route::middleware(['guest'])->group(function () {
     });
 });
 
-Route::middleware(['guest'])->group(function () {
+Route::middleware(['auth'])->group(function () {
+    // chatbot
+    Route::get('/chatbot', function () {
+        return view('features.chatbot');
+    })->name('chatbot');
+
+    Route::get('/chatbot/{chat}', [Controller::class, 'chatbot'])->name('chat');
+
     Route::get('/test', function () {
         return view('features/test/HomeTest');
     })->name('test');

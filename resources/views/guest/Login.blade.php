@@ -33,17 +33,24 @@
                         {{session('success')}}
                     </div>
                 @endif  
+                @if (session()->has('loginError'))
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        
+                        {{session('loginError')}}
+                    </div>
+                @endif  
                 
 
                 <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?
                     <a wire:navigate href="/register"> Sign Up Here</a>
                 </p>
-                <form method="post">
-                    <input type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com"
-                        required>
+                <form method="post" action="{{ route('LoginUser') }}">
+                    @csrf
+                    <input name="EmailInput" type="email" class="form-control mb-3 @error('email') is-invalid @enderror" id="EmailInput" placeholder="name@example.com"
+                       autofocus required value="{{old('email')}}">
                     <div class="d-flex justify-content-end">
                         <input type="password" name="password" class="form-control mb-3" id="PasswordInput"
-                            placeholder="Password" maxlength="12" required>
+                            placeholder="Password" maxlength="12" autofocus required>
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword"></i>
                     </div>
                     <button type="submit" class="btn btnLogin w-100 mb-3" style="">Login</button>
@@ -78,12 +85,6 @@
 
             // toggle the icon
             this.classList.toggle("bi-eye");
-        });
-
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
         });
     </script>
 

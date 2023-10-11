@@ -3,6 +3,7 @@
 use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,12 @@ Route::get('/profile', function () {
 })->name('profile');    
 
 Route::middleware(['guest'])->group(function () {
+    //Login
     Route::get('/login', function () {
         return view('guest/Login');
     })->name('login');
+    
+    Route::post('/login', [LoginController::class, 'LoginUser'])->name('LoginUser');
     
     // Register
     Route::get('/register', function () {

@@ -32,26 +32,12 @@ class LoginController extends Controller
 {
     public function LoginUser(Request $request)
     {
-        $request->validate([
+        $validated =  $request->validate([
             'EmailInput' => 'required|email:dns',
             'password' => 'required'
         ]);
 
-        // Pemeriksaan apakah email sudah terdaftar
-        $user = User::where('EmailInput', $request->EmailInput)->first();
-
-        if (!$user) {
-            return back()->withErrors([
-                'loginError' => 'The provided email is not registered.',
-            ])->withInput();
-        }
-
-        $credentials = [
-            'EmailInput' => $request->EmailInput,
-            'password' => $request->password 
-        ];
-
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($validated)) {
             $request->session()->regenerate();
  
             return redirect()->intended('/');

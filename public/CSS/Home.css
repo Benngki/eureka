@@ -101,3 +101,23 @@
 	  opacity: 1;
 	}
   }
+
+  .ikonnv{
+	background-color: none;
+}
+@media only screen and (max-width : 78px){
+	nav ul {
+		display: none;
+
+	}
+}
+@media (max-width: 1199.98px) { 
+
+	#descHome {
+		inline-size: 10vw !important;
+	}
+ }
+
+.nav-link :hover {
+text-decoration: none;
+}

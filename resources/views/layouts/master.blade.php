@@ -58,6 +58,8 @@
     {{-- custom script --}}
     @stack('js')
 
+    @yield('js')
+
     @livewireScripts
 </body>
 

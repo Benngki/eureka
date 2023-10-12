@@ -51,24 +51,23 @@
                                 </h1>
                                 <div class=" mt-4 TMD Opensans Test1">
                                     <p class=" TMD" style="font-size: 210%">
-                                        Hasil Tes anda Depresi
+                                        Hasil Tes anda Gelisah dan Cemas
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center align-self-stretch ">
-                            <img style=" width: 20%;" class="Dialogdirir" alt=""
-                                src="{{ asset('img/Tinggi.png') }}" />
+                            <img style=" width: 30%;" class="Dialogdirir" alt=""
+                                src="{{ asset('img/image 16.png') }}" />
                         </div>
-                        <p class="mt-3 Opensans m-0 text-center "> Hasil tes menunjukkan bahwa tingkat stres Anda saat
-                            ini
-                            <br> <b> Depresi. </b> Anda mungkin merasa memiliki banyak dalam kehidupan
-                            <br> Anda saat ini dan mungkin juga merasa kurang mampu untuk mengatasi berbagai
-                            <br> yang sedang dihadapi. Terdapat banyak kejadian tak terduga yang mungkin membuat
-                            <br> merasa kehilangan kendali atas kehidupan Anda. Kamu dibebani oleh rasa
-                            <br> punya harapan dan tidak dapat ditolong.
+                        <p class="mt-3 Opensans m-0 text-center"> Hasil tes menunjukkan bahwa tingkat stres Anda saat
+                            ini berada
+                            <br> <b> Gelisah dan Cemas. </b> Anda mungkin merasa kurang nyaman dengan kehidupan
+                            <br> Anda saat ini mungkin juga menghadapi beberapa peristiwa tak terduga.
+                            <br> Selain itu, Anda mungkin mengalami kesulitan dalam menghadapi
+                            <br> masalah-masalah yang sedang dihadapi.
                         </p>
-                        <button type="button" class="boti btn TMD mt-5 btn-lg "
-                            style="background-color: #48904F; width: 15%; color: #FFFFFF; border-radius: 100px;">Kembali</button>
+                        <a href='{{route("home")}}' role="button" class="btn boti  TMD mt-5 btn-lg "
+                            style="background-color: #48904F; width: 15%; color: #FFFFFF; border-radius: 100px;">Kembali</a>
                     </div>
                 </div>
             </div>

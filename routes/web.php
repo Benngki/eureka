@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HomeTestController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TesPsikologController;
 
@@ -65,25 +66,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/chatbot/{chat}', [Controller::class, 'chatbot'])->name('chat');
 
-    Route::get('/test', function () {
-        return view('features/test/HomeTest');
-    })->name('test');
-    
-    Route::get('/HasilTest1', function () {
-        return view('features/test/HasilTest1');
-    });
-    
-    Route::get('/HasilTest2', function () {
-        return view('features/test/HasilTest2');
-    });
-    
-    Route::get('/HasilTest3', function () {
-        return view('features/test/HasilTest3');
-    });
-    
-    Route::get('/HasilTest4', function () {
-        return view('features/test/HasilTest4');
-    });
+    Route::get('/test', [HomeTestController::class, 'index'])->name('test');
     
     Route::get('/TesPsikolog', [TesPsikologController::class, 'index'])->name('soal-test');
     Route::post('/TesPsikolog', [TesPsikologController::class, 'store']);

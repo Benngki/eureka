@@ -20,7 +20,6 @@ class TesPsikologController extends Controller
     }
 
     public function index(){        
-        request()->session()->forget('points');    
         return view('features.test.TesPsikolog',[
             'test' => $this->test
         ]);

@@ -1,7 +1,7 @@
 <div id="sidebar" class="col-1 vh-100 d-flex flex-column rounded-end-5 ">
     <a wire:navigate class="btn my-2 mt-4 p-0" role="button" href="/profile">
         <img class="w-50" src="{{ asset('img/avatar.png') }}">
-        <p class="m-0">Username</p>
+        <p class="m-0 text-truncate">{{ Auth::user()->name }}</p>
     </a>
 
     <a class="btn my-2 p-0" role="button" href="/chatbot">

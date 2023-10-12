@@ -46,7 +46,7 @@
                 </p>
                 <form method="post" action="{{ route('LoginUser') }}">
                     @csrf
-                    <input name="EmailInput" type="email" class="form-control mb-3 @error('email') is-invalid @enderror" id="EmailInput" placeholder="name@example.com"
+                    <input name="email" type="email" class="form-control mb-3 @error('email') is-invalid @enderror" id="email" placeholder="name@example.com"
                        autofocus required value="{{old('email')}}">
                     <div class="d-flex justify-content-end">
                         <input type="password" name="password" class="form-control mb-3" id="PasswordInput"

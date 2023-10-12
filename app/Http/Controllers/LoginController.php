@@ -12,7 +12,7 @@ use App\Models\User;
 //     public function LoginUser(Request $request)
 //     {
 //         $credentials = $request->validate([
-//             'EmailInput' => 'required|email:dns',
+//             'email' => 'required|email:dns',
 //             'password' => 'required'
 //         ]);
         
@@ -33,7 +33,7 @@ class LoginController extends Controller
     public function LoginUser(Request $request)
     {
         $validated =  $request->validate([
-            'EmailInput'=>'required|email',
+            'email'=>'required|email',
             'password'=>'required',
         ]);
 

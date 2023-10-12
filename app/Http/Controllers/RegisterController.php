@@ -10,8 +10,8 @@ class RegisterController extends Controller
 {
     public function registerNewUser(Request $request){
         $validated = $request->validate([
-            'UsernameInput'=>'required|max:255',
-            'EmailInput'=>'required|email|unique:users',
+            'name'=>'required|max:255',
+            'email'=>'required|email|unique:users',
             'password'=>'required|min:8|max:12',
             'Confirmpassword'=>'required'
         ]);     

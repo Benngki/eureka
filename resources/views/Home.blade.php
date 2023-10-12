@@ -72,7 +72,7 @@
                                         alt="">
                                   </button>
                                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li><a class="dropdown-item" href="{{route('profile')}}">Profile</a></li>
+                                    <li><a class="dropdown-item" href="{{route('profile.index')}}">Profile</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="{{ route('logout') }}">Keluar</a></li>
                                   </ul>

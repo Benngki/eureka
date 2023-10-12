@@ -34,20 +34,23 @@
                         href="/login"> Masuk</a></p>
                 <form method="post" action="{{ route('registerNewUser') }}">
                     @csrf
-                    <input name="UsernameInput" type="text" class="form-control mb-3" id="UsernameInput" placeholder="Nama" autofocus required>
-                    <input name="EmailInput" type="email" class="form-control mb-3" id="EmailInput" placeholder="contoh@example.com" autofocus required >
+                    {{-- nama --}}
+                    <input name="name" type="text" class="form-control mb-3" id="username" placeholder="Nama" autofocus required>
+                    {{-- email --}}
+                    <input name="email" type="email" class="form-control mb-3" id="email" placeholder="contoh@example.com" autofocus required >
+                    {{-- kata sandi --}}
                     <div class="d-flex justify-content-end">
                         <input type="password" name="password" class="form-control mb-3" id="PasswordInput"
                             placeholder="Kata Sandi" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             autofocus required>
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword"></i>
                     </div>
+                    {{-- konfirmasi kata sandi --}}
                     <div class="d-flex justify-content-end">
                         <input type="password" name="Confirmpassword" class="form-control mb-3" id="PasswordInput2"
                             placeholder="Konfirmasi Kata Sandi" maxlength="20">
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword2"></i>
                     </div>
-                    {{-- <button type="submit">register</button> --}}
                     <button type="submit" class="btn btnLogin w-100 mb-3"
                         style="font-family: 'Open Sans', sans-serif;">Daftar</button>
                 </form>
@@ -209,5 +212,4 @@
 
     @livewireScripts
 </body>
-
 </html>

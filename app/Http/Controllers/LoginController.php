@@ -33,9 +33,10 @@ class LoginController extends Controller
     public function LoginUser(Request $request)
     {
         $validated =  $request->validate([
-            'EmailInput' => 'required|email:dns',
-            'password' => 'required'
+            'EmailInput'=>'required|email',
+            'password'=>'required',
         ]);
+
 
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();

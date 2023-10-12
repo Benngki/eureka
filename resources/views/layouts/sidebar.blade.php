@@ -4,7 +4,7 @@
         <p class="m-0">Username</p>
     </a>
 
-    <a wire:navigate class="btn my-2 p-0" role="button" href="/chatbot">
+    <a class="btn my-2 p-0" role="button" href="/chatbot">
         <div class="py-1 m-2 mb-0 rounded-4 bg-white mx-auto p-2" style="width: 50%">
             <img class="w-100" src="{{ asset('img/chatbot.png') }}">
         </div>

@@ -67,8 +67,8 @@
                             <br> Terdapat banyak kejadian tak terduga yang mungkin membuat Anda lebih
                             <br> memilih untuk menjaga jarak dari situasi sosial.
                         </p>
-                        <button type="button" class="boti btn TMD mt-5 btn-lg "
-                            style="background-color: #48904F; width: 15%; color: #FFFFFF; border-radius: 100px;">Kembali</button>
+                        <a href='{{route("home")}}' role="button" class="boti btn TMD mt-5 btn-lg "
+                            style="background-color: #48904F; width: 15%; color: #FFFFFF; border-radius: 100px;">Kembali</a>
                     </div>
                 </div>
             </div>

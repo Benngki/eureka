@@ -87,6 +87,9 @@
                         *Lakukan tes untuk update tingkat stress anda
                     </small>
 
+                    <x-button-a href="{{route('logout')}}" class="w-100 mt-3">
+                        keluar
+                    </x-button-a>
                 </div>
                 <div class="col text-start">
 

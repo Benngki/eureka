@@ -9,6 +9,7 @@ use App\Models\TestQuestion;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class TesPsikologController extends Controller
@@ -34,6 +35,7 @@ class TesPsikologController extends Controller
         $request->session()->put('points', $request->session()->get('points', 0) + TestAnswer::find($ans_id)->point);
         if ($request->page_id == 10){
             TestHistory::create([
+                'user_id' => Auth::user()->id,
                 'point' => $request->session()->get('points')
             ]);
             $request->session()->forget('points');    

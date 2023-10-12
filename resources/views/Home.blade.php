@@ -49,7 +49,7 @@
                             <a class="nav-link active linkNav " aria-current="page" href="#">Beranda</a>
                         </li>
                         <li class="nav-item">
-                            <a wire:navigate class="nav-link linkNav  " href="{{ route('chatbot') }}">Chatbot</a>
+                            <a  class="nav-link linkNav  " href="{{ route('chatbot') }}">Chatbot</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link linkNav  " href="#services">Layanan</a>
@@ -72,8 +72,7 @@
                                         alt="">
                                   </button>
                                   <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                    <li><a class="dropdown-item" href="{{route('profile')}}">Profile</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item" href="{{ route('logout') }}">Keluar</a></li>
                                   </ul>

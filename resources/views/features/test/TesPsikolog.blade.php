@@ -139,7 +139,7 @@
                     </div>
                     
                     {{-- button --}}
-                    <button type="submit" class="btn btn-primary mt-3 @if (session('submitted'))
+                    <button type="submit" class="btn btn-success mt-3 @if (session('submitted'))
                         disabled
                     @endif">
                         @if ($test->currentPage() < 10)
@@ -148,6 +148,17 @@
                             Selesai
                         @endif
                     </button>
+
+                    {{-- <x-button type="submit" class="mt-3 @if (session('submitted'))
+                    disabled
+                @endif">
+                        @if ($test->currentPage() < 10)
+                            Selanjutnya
+                        @else
+                            Selesai
+                        @endif
+                    </x-button> --}}
+
                 </div>
                     {{-- <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
                         <a wire:navigate href="{{ $test->nextPageUrl() }}" role="button" class="btn"><img

@@ -9,5 +9,5 @@ class TestHistory extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['point'];
+    protected $fillable = ['point', 'user_id'];
 }

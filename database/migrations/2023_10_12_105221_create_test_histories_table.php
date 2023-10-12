@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('test_histories', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
             $table->integer('point');
             $table->timestamps();
         });

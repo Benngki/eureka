@@ -27,6 +27,10 @@
             width: fit-content;
         }
 
+        .TMD {
+            font-family: 'clarendon';
+
+        }
 
         #profile_pict .pencil {
             width: 2.5vw;
@@ -62,7 +66,7 @@
         Profile.
     </h1>
 
-    <form action="#" class="mt-4">
+    <form action="#"  class="mt-4 ">
         <div class="container">
             <div class="row gx-5 pb-4">
                 <div class="col-3 d-flex flex-column align-items-center">
@@ -87,58 +91,62 @@
                     </small>
 
                 </div>
-                <div class="col text-start">
-
-                    {{-- first name --}}
-                    <div class="mb-1">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input type="name" class="form-control border-3" id="firstName" required>
-                    </div>
+                <div class="col text-start ">
                     {{-- last name --}}
                     <div class="mb-1">
-                        <label for="lastName" class="form-label">Last Name</label>
-                        <input type="name" class="form-control border-3" id="lastName" required>
+                        <label for="Name" class="form-label">Nama</label>
+                        <input type="name" class="form-control border-3" id="lastName" placeholder="paidi" required>
                     </div>
                     {{-- phone number --}}
                     <div class="mb-1">
-                        <label for="phoneNumber" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control border-3" id="phoneNumber" required>
+                        <label for="phoneNumber" class="form-label">Nomor Telepon</label>
+                        <input type="number" class="form-control border-3" id="phoneNumber"  placeholder="088123456743"required>
                     </div>
                     {{-- date of birth --}}
                     <div class="mb-1">
-                        <label for="birthDay" class="form-label">Date of Birth</label>
+                        <label for="birthDay" class="form-label">Tanggal lahir</label>
 
                         <div class="d-flex">
                             {{-- tanggal --}}
-                            <input type="number" class="form-control border-3 me-3" id="birthDay" required>
+                            <select class="form-select me-3 border-3" id="birthDay" required>
+                                @for ($day = 1; $day <= 31; $day++)
+                                    <option value="{{ $day }}">{{ $day }}</option>
+                                @endfor
+                            </select>
+                            
                             {{-- bulan --}}
                             <select class="form-select me-3 border-3" id="birthMonth">
-                                <option value="January" selected>January</option>
-                                <option value="February">February</option>
-                                <option value="March">March</option>
+                                <option value="January" selected>Januari</option>
+                                <option value="February">Februari</option>
+                                <option value="March">Maret</option>
                                 <option value="April">April</option>
-                                <option value="May">May</option>
-                                <option value="June">June</option>
-                                <option value="July">July</option>
-                                <option value="August">August</option>
+                                <option value="May">Mei</option>
+                                <option value="June">Juni</option>
+                                <option value="July">Juli</option>
+                                <option value="August">Agustus</option>
                                 <option value="September">September</option>
-                                <option value="October">October</option>
+                                <option value="October">Oktober</option>
                                 <option value="November">November</option>
-                                <option value="December">December</option>
+                                <option value="December">Desember</option>
                             </select>
                             {{-- tahun --}}
-                            <input type="number" class="form-control border-3" id="birthYear" required>
+                            <label for="birthYear" class="form-label"></label>
+                            <select class="form-select me-3 border-3" id="birthYear" required>
+                                @for ($year = 1950; $year <= 2023; $year++)
+                                    <option value="{{ $year }}">{{ $year }}</option>
+                                @endfor
+                            </select>
                         </div>
                     </div>
                     {{-- email --}}
                     <div class="mb-1">
                         <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control border-3" id="email" required>
+                        <input type="email" class="form-control border-3" id="email" placeholder="nama@contoh.com" required>
                     </div>
                     <div class="row">
                         <div class="col-4 d-flex  ">
-                            <button type="submit" class="btn btn-success mt-4 flex-fill">
-                                Save Changes
+                            <button type="submit" class="btn btn-success mt-4 flex-fill TMD">
+                                Simpan Perubahan
                             </button>
                         </div>
                     </div>
@@ -165,7 +173,7 @@
                     const image = document.createElement("img");
                     image.src = URL.createObjectURL(selectedFile);
                     image.classList.add(
-                    "picture"); // Tambahkan kelas "picture" untuk mengikuti gaya lingkaran
+                        "picture"); // Tambahkan kelas "picture" untuk mengikuti gaya lingkaran
 
                     // Kosongkan kontainer gambar sebelum menambahkan gambar yang baru diunggah.
                     imageContainer.innerHTML = '';

@@ -88,3 +88,5 @@ Route::middleware(['auth'])->group(function () {
 
 // Livewire
 Route::get('/counter', Counter::class);
+
+Route::resource('users', UserController::class);

@@ -16,4 +16,8 @@ class Controller extends BaseController
         $response = Http::get($url);
         return $response['response'];
     }
+
+    public function ForgotPasswordUser(Request $request){
+        $user = User::where('EmailInput', $request->EmailInput)->first();
+    }
 }

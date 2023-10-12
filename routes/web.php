@@ -54,6 +54,10 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/forgot-password', function () {
         return view('guest/ForgotPassword');
     });
+    
+    Route::post('/forgot-password', [Controller::class, 'ForgotPasswordUser'])->name('ForgotPasswordUser');
+
+
     Route::get('/ResetPassword', function () {
         return view('guest/ChangePassword');
     });

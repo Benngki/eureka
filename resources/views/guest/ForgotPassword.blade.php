@@ -24,23 +24,23 @@
         <div class="d-flex justify-content-center mt-4">
             <div class="ForgotName">
                 <p>
-                    Forgot Password
+                    Lupa Kata Sandi
                 </p>
                 <div class="Dpa">
                     <p>
-                        Don’t have an account?
+                        Belum punya akun?
                         <a wire:navigate href="/register" class="singup" style="font-family: 'Open Sans', sans-serif;" >
-                            Sign Up Here
+                            Daftar
                         </a>
                     </p>
                 </div>
 
-                <form action="">
-                    <div class="">
-                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                <form action="" method="POST">
+                    
+                        <input name="EmailForgetpass" type="email" class="form-control" id="exampleFormControlInput1"
                             placeholder="Enter your email!" style="font-family: 'Open Sans' " required>
-                    </div>
-                    <button type="submit" class="btn btnpo w-100">Send Email</button>                    
+                    
+                    <button type="submit" class="btn btnpo w-100">Kirim Email</button>                    
                 </form>
             </div>
         </div>

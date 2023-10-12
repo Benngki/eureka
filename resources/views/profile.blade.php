@@ -102,7 +102,7 @@
                                 <img class="pencil position-absolute bottom-0 end-0" src="{{ asset('img/pencil.png') }}">
                                 <input type="file" id="fileInput" accept="image/*" style="display: none;" name="avatar">
                             </button>
-                            <div id="image-container"><img class="picture" src="{{ $user->avatar }}"></div>
+                            <div id="image-container"><img class="picture" src="{{asset('img/avatar.png')}}"></div>
                             <button id="" type="submit" class="visually-hidden"></button>
                         </div>
                     </form>

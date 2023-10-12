@@ -20,7 +20,7 @@ class TesPsikologController extends Controller
     }
 
     public function index(){        
-        // $test = TestQuestion::paginate(1);
+        request()->session()->forget('points');    
         return view('features.test.TesPsikolog',[
             'test' => $this->test
         ]);
@@ -34,14 +34,31 @@ class TesPsikologController extends Controller
         $ans_id = $request->ans_id;
         $request->session()->put('points', $request->session()->get('points', 0) + TestAnswer::find($ans_id)->point);
         if ($request->page_id == 10){
+            $total_point = $request->session()->get('points', 0);
             TestHistory::create([
                 'user_id' => Auth::user()->id,
                 'point' => $request->session()->get('points')
             ]);
+
+            // Poin 10-16 (bebas gangguan)
+            // Poin 17-24 (gelisah atau cemas)
+            // Poin 25-32 (antisosial) hasilTest4
+            // Poin 33-40 (depresi) 
+
+            if ($total_point <= 16) {
+                return view('features.test.hasilTest.bebasGangguan');
+            } else if ($total_point >= 17 && $total_point <= 24) {
+                return view('features.test.hasilTest.gelisah');
+            }else if ($total_point >= 25 && $total_point <= 32) {
+                return view('features.test.hasilTest.antisosial');
+            }else if ($total_point >= 33) {
+                return view('features.test.hasilTest.depresi');
+            }
+
             $request->session()->forget('points');    
-            return redirect()->route('test')->with('finish_test', true);
         }else {
             return redirect($request->next_url);
         }
+
     }
 }

@@ -45,6 +45,7 @@
 
 
             <div class="col-11 offset-1 d-flex flex-column vh-100">
+                
                 <div class="container-fluid text-center position-absolute"style="
     opacity: 30%; background-size: vh-100 ;
     background-image: url('{{ asset('img/testsoal.jpg') }}');
@@ -65,32 +66,11 @@
                     </div>
                 </div>
 
-                {{-- <div class="d-flex justify-content-center align-self-stretch ">
-        <img style=" width: 20%;" class="Dialogdirir" alt="" src="{{ asset('img/test soal.jpg') }}" />
-    </div> --}}
-
                 <form action="/TesPsikolog" method="POST"
                     class="container-fluid text-center d-flex flex-fill justify-content-center position-relative w-50">
-                    {{-- <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
-                        <a wire:navigate href="{{ $test->previousPageUrl() }}" role="button" class="btn"><img
-                                src="{{ asset('img/next1.png') }}"></a>
-                    </div> --}}
                     @csrf
                     <div class="card align-self-center w-75 " style="border:none; background-color:transparent">
                         <p class="title mt-4">{{ $test->first()->soal }}</p>
-                        {{-- <div class="content w-100">
-                            @foreach ($test->first()->answers as $answer)
-                                <input type="radio" name="point" id="{{$answer->id}}">
-                            @endforeach
-                            @foreach ($test->first()->answers as $answer)
-                                <label for="{{$answer->id}}" class="box first">
-                                    <div class="plan">
-                                        <span class="circle"></span>
-                                        <span class="yearly">{{$answer->jawaban}}</span>
-                                    </div>
-                                </label>
-                            @endforeach
-                        </div> --}}
                         <div class="content">
                             <input type="radio" name="ans_id" id="one"
                                 value="{{ $test->first()->answers->all()[0]['id'] }}"  @if (session('submitted') == $test->first()->answers->all()[0]['id'])
@@ -139,9 +119,7 @@
                     </div>
                     
                     {{-- button --}}
-                    <button type="submit" class="btn btn-success mt-3 @if (session('submitted'))
-                        disabled
-                    @endif">
+                    <button type="submit" class="btn btn-success mt-3 disabled">
                         @if ($test->currentPage() < 10)
                             Selanjutnya
                         @else
@@ -175,6 +153,19 @@
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('input[type="radio"]').change(function (e) { 
+                if( $('input[type="radio"]').is(':checked') ){
+                    $('button[type="submit"]').removeClass('disabled');
+                }
+            });
+        });
     </script>
 
     @livewireScripts

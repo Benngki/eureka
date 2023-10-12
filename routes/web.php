@@ -70,21 +70,21 @@ Route::middleware(['auth'])->group(function () {
         return view('features/test/HomeTest');
     })->name('test');
     
-    // Route::get('/HasilTest1', function () {
-    //     return view('features/test/HasilTest1');
-    // });
+    Route::get('/HasilTest1', function () {
+        return view('features/test/HasilTest1');
+    });
     
-    // Route::get('/HasilTest2', function () {
-    //     return view('features/test/HasilTest2');
-    // });
+    Route::get('/HasilTest2', function () {
+        return view('features/test/HasilTest2');
+    });
     
-    // Route::get('/HasilTest3', function () {
-    //     return view('features/test/HasilTest3');
-    // });
+    Route::get('/HasilTest3', function () {
+        return view('features/test/HasilTest3');
+    });
     
-    // Route::get('/HasilTest4', function () {
-    //     return view('features/test/HasilTest4');
-    // });
+    Route::get('/HasilTest4', function () {
+        return view('features/test/HasilTest4');
+    });
     
     Route::get('/TesPsikolog', [TesPsikologController::class, 'index'])->name('soal-test');
     Route::post('/TesPsikolog', [TesPsikologController::class, 'store']);

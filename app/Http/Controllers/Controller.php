@@ -19,5 +19,6 @@ class Controller extends BaseController
 
     public function ForgotPasswordUser(Request $request){
         $user = User::where('EmailInput', $request->EmailInput)->first();
+        
     }
 }

@@ -51,29 +51,29 @@
                                 </h1>
                                 <div class=" mt-4 TMD Opensans Test1">
                                     <p class=" TMD" style="font-size: 210%">
-                                        Hasil Tes anda Gelisah dan Cemas
+                                        Hasil Tes anda Rendah
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center align-self-stretch ">
-                            <img style=" width: 30%;" class="Dialogdirir" alt=""
-                                src="{{ asset('img/image 16.png') }}" />
+                            <img style=" width: 20%;" class="Dialogdirir" alt=""
+                                src="{{ asset('img/rendah.png') }}" />
                         </div>
-                        <p class="mt-3 Opensans m-0 text-center"> Hasil tes menunjukkan bahwa tingkat stres Anda saat
-                            ini berada
-                            <br> <b> Gelisah dan Cemas. </b> Anda mungkin merasa kurang nyaman dengan kehidupan
-                            <br> Anda saat ini mungkin juga menghadapi beberapa peristiwa tak terduga.
-                            <br> Selain itu, Anda mungkin mengalami kesulitan dalam menghadapi
-                            <br> masalah-masalah yang sedang dihadapi.
+                        <p class="mt-3 Opensans m-0 text-center "> Hasil tes menunjukkan bahwa tingkat stres Anda saat
+                            ini
+                            <br> pada tingkat <b>Rendah,</b> yang menunjukkan bahwa Anda dalam keadaan
+                            <br> baik-baik saja. Anda mungkin merasa ringan dalam menghadapi berbagai
+                            <br> aspek kehidupan Anda saat ini, dan tidak ada banyak beban atau masalah yang
+                            <br> membuat Anda merasa khawatir. Anda merasa lebih terkendali dan tidak banyak
+                            <br> kejadian tak terduga yang mengganggu kehidupan Anda.
                         </p>
-                        <button type="button" class="boti btn TMD mt-5 btn-lg "
-                            style="background-color: #48904F; width: 15%; color: #FFFFFF; border-radius: 100px;">Kembali</button>
+                        <a href='{{route("home")}}' role="button" class="boti btn TMD mt-5 btn-lg "
+                            style="background-color: #48904F; width: 15%; color: #FFFFFF; border-radius: 100px;">Kembali</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     {{-- Bootstrap --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">

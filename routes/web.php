@@ -1,10 +1,14 @@
 <?php
 
+use App\Models\User;
 use App\Livewire\Counter;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TesPsikologController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,14 +24,6 @@ use App\Http\Controllers\LoginController;
 Route::get('/', function (){
     return view('Home');
 })->name('home');
-
-// Route::get('/chatbot/{chat}', function (){
-//     return 'hello';
-// })->name('chat');
-
-Route::get('/profile', function () {
-    return view('profile');
-})->name('profile');
 
 Route::middleware(['guest'])->group(function () {
     //Login
@@ -54,6 +50,14 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    // profile 
+    Route::post('/profile', [UserController::class,'update'])->name('profile.update');
+    Route::post('/profile/update-avatar', [UserController::class,'updateImage'])->name('profile.update.avatar');
+    Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
+
+    // log out
+    Route::get('/logout', [Controller::class, 'logout'])->name('logout');    
+
     // chatbot
     Route::get('/chatbot', function () {
         return view('features.chatbot');
@@ -81,12 +85,9 @@ Route::middleware(['auth'])->group(function () {
         return view('features/test/HasilTest4');
     });
     
-    Route::get('/TesPsikolog', function () {
-        return view('features/test/TesPsikolog');
-    })->name('soal-test');
+    Route::get('/TesPsikolog', [TesPsikologController::class, 'index'])->name('soal-test');
+    Route::post('/TesPsikolog', [TesPsikologController::class, 'store']);
 });
 
 // Livewire
 Route::get('/counter', Counter::class);
-
-Route::resource('users', UserController::class);

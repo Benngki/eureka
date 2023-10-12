@@ -29,48 +29,47 @@
             </div>
 
             <div>
-                <h3 style="font-family: 'Clarendon';">Register</h3>
-                <p style="font-family: 'Open Sans', sans-serif;">Already have an account?<a wire:navigate
-                        href="/login"> Login Here</a></p>
+                <h3 style="font-family: 'Clarendon';">Daftar</h3>
+                <p style="font-family: 'Open Sans', sans-serif;">Sudah Punya Akun?<a wire:navigate
+                        href="/login"> Masuk</a></p>
                 <form method="post" action="{{ route('registerNewUser') }}">
                     @csrf
-                    <input name="UsernameInput" type="text" class="form-control mb-3" id="UsernameInput" placeholder="Username" autofocus required>
-                    <input name="EmailInput" type="email" class="form-control mb-3" id="EmailInput" placeholder="name@example.com" autofocus required >
+                    <input name="UsernameInput" type="text" class="form-control mb-3" id="UsernameInput" placeholder="Nama" autofocus required>
+                    <input name="EmailInput" type="email" class="form-control mb-3" id="EmailInput" placeholder="contoh@example.com" autofocus required >
                     <div class="d-flex justify-content-end">
                         <input type="password" name="password" class="form-control mb-3" id="PasswordInput"
-                            placeholder="Password" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            placeholder="Kata Sandi" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             autofocus required>
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword"></i>
                     </div>
                     <div class="d-flex justify-content-end">
                         <input type="password" name="Confirmpassword" class="form-control mb-3" id="PasswordInput2"
-                            placeholder="Confirm Password" maxlength="20">
+                            placeholder="Konfirmasi Kata Sandi" maxlength="20">
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword2"></i>
                     </div>
                     {{-- <button type="submit">register</button> --}}
                     <button type="submit" class="btn btnLogin w-100 mb-3"
-                        style="font-family: 'Open Sans', sans-serif;">Register</button>
+                        style="font-family: 'Open Sans', sans-serif;">Daftar</button>
                 </form>
 
                 
 
                 <div class="p-3" id="message">
-                    <p>Password must contain the following:</p>
-                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-                    <p id="number" class="invalid">A <b>number</b></p>
-                    <p id="length" class="invalid"> <b>8-12 characters</b></p>
+                    <p>Kata sandi harus berisikan:</p>
+                    <p id="letter" class="invalid"><b>Huruf</b> kecil</p>
+                    <p id="capital" class="invalid"><b>Huruf</b> besar</p>
+                    <p id="number" class="invalid"><b>Angka</b></p>
+                    <p id="length" class="invalid"><b>8-12 karakter</b></p>
                 </div>
 
                 <div class="p-3" id="Confirm">
-                    <p>Confirm Password:</p>
-                    <p id="same" class="invalid">Confirm password is <b>Match</b></p>
+                    <p>Ketik Ulang Kata Sandi:</p>
+                    <p id="same" class="invalid">Kata sandi <b>Sama</b></p>
                 </div>
 
 
                 <div class="text-center" style="font-size: smaller;">
-                    <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Register instantly using your social
-                        media</p>
+                    <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Daftar Instan lewat akun: </p>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn rounded-5"><img src="/img/logoGoogle.png" alt=""></button>

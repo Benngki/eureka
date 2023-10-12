@@ -25,7 +25,7 @@
         <div class="d-flex justify-content-center mt-5">
             <img style="max-width: 100%" src="{{ asset('img/Gambasr_login.png') }}" alt="">
             <div>
-                <h3 style="font-family: 'Clarendon';">Login</h3>
+                <h3 style="font-family: 'Clarendon';">Masuk</h3>
 
                 @if (session()->has('success'))
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -41,8 +41,8 @@
                 @endif  
                 
 
-                <p style="font-family: 'Open Sans', sans-serif;">Dont Have an account?
-                    <a wire:navigate href="/register"> Sign Up Here</a>
+                <p style="font-family: 'Open Sans', sans-serif;">Belum Punya Akun?
+                    <a wire:navigate href="/register"> Daftar</a>
                 </p>
                 <form method="post" action="{{ route('LoginUser') }}">
                     @csrf
@@ -53,12 +53,11 @@
                             placeholder="Password" maxlength="12" autofocus required>
                         <i class="bi bi-eye-slash mt-1 me-3" style="position: absolute;" id="togglePassword"></i>
                     </div>
-                    <button type="submit" class="btn btnLogin w-100 mb-3" style="">Login</button>
+                    <button type="submit" class="btn btnLogin w-100 mb-3" style="">Masuk</button>
                 </form>
                 <div class="text-center" style="font-size: smaller;">
-                    <a wire:navigate wire style="font-family: 'Open Sans', sans-serif;" href="/forgot-password">Forgot Password?</a>
-                    <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Login instantly using your social
-                        media</p>
+                    <a wire:navigate wire style="font-family: 'Open Sans', sans-serif;" href="/forgot-password">Lupa kata sandi?</a>
+                    <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Masuk instan dengan akunmu</p>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn rounded-5"><img src="{{ asset('img/logoGoogle.png') }}"

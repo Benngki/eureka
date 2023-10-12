@@ -39,7 +39,15 @@
 
 
                 <div class="col-11 offset-1 d-flex flex-column vh-100 justify-content-center">
+                    
                     <div class="cotainer d-flex flex-column align-items-center">
+                        {{-- jika selesai test --}}
+                        @if (session('finish_test'))
+                            <div class="alert alert-success" role="alert">
+                                Selamat anda baru saja menyelesaikan test
+                            </div>
+                        @endif
+
                         <div class="d-flex justify-content-center">
                             <div class="MengelDiri ">
                                 <h1 class="TMD text-center">

@@ -52,7 +52,7 @@
   }
 
 .scrolled.fade-in {
-	animation: fade-in 1s ease-in-out both;
+	animation: fade-in 500ms ease-in-out both;
   }
   @keyframes fade-in {
   0% {
@@ -87,12 +87,12 @@
 
 
   .scrolled.slide-left {
-	animation: slide-in-right 1s ease-in-out both;
+	animation: slide-in-left 1s ease-in-out both;
   }
-  @keyframes slide-in-right {
+  @keyframes slide-in-left {
 	0% {
-	  -webkit-transform: translateX(100px);
-	  transform: translateX(100px);
+	  -webkit-transform: translateX(-100px);
+	  transform: translateX(-100px);
 	  opacity: 0;
 	}
 	100% {

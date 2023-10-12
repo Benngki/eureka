@@ -16,4 +16,18 @@ class Controller extends BaseController
         $response = Http::get($url);
         return $response['response'];
     }
+
+    /**
+     * Log the user out of the application.
+     */
+    public function logout(Request $request): RedirectResponse
+    {
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/');
+    }
 }

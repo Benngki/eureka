@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="./TesPsikolog.css" />
     <link rel="stylesheet" href="{{ asset('CSS/main.css') }}">
 
+    @livewireStyles
 </head>
 
 <body class="vh-100 d-flex flex-column position-relative overflow-hidden">
@@ -44,10 +45,9 @@
 
 
             <div class="col-11 offset-1 d-flex flex-column vh-100">
-                <div
-                    class="container-fluid text-center position-absolute"style="
-    opacity: 30%; background-size: vh-100 ; 
-    background-image: url('{{ asset('img/testsoal.jpg') }}'); 
+                <div class="container-fluid text-center position-absolute"style="
+    opacity: 30%; background-size: vh-100 ;
+    background-image: url('{{ asset('img/testsoal.jpg') }}');
     height: 100%; background-position: top;
     transform: translateY(3rem);">
                 </div>
@@ -69,50 +69,92 @@
         <img style=" width: 20%;" class="Dialogdirir" alt="" src="{{ asset('img/test soal.jpg') }}" />
     </div> --}}
 
-                <div class="container-fluid text-center d-flex justify-content-center flex-fill position-relative">
-                    <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
-                        <button class="btn" type="button"><img src="{{ asset('img/next1.png') }}"></button>
-                    </div>
-                    <div class="card align-self-center" style="border:none; background-color:transparent">
-                        <div class="progress mt-2" role="progressbar" aria-label="Basic example" aria-valuenow="0"
-                            aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                            <div class="progress-bar" style="width: 20% ; "></div>
-                        </div>
-                        <p class="title mt-4">{{$tests->last()->soal }}</p>
+                <form action="/TesPsikolog" method="POST"
+                    class="container-fluid text-center d-flex flex-fill justify-content-center position-relative w-50">
+                    {{-- <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
+                        <a wire:navigate href="{{ $test->previousPageUrl() }}" role="button" class="btn"><img
+                                src="{{ asset('img/next1.png') }}"></a>
+                    </div> --}}
+                    @csrf
+                    <div class="card align-self-center w-75 " style="border:none; background-color:transparent">
+                        <p class="title mt-4">{{ $test->first()->soal }}</p>
+                        {{-- <div class="content w-100">
+                            @foreach ($test->first()->answers as $answer)
+                                <input type="radio" name="point" id="{{$answer->id}}">
+                            @endforeach
+                            @foreach ($test->first()->answers as $answer)
+                                <label for="{{$answer->id}}" class="box first">
+                                    <div class="plan">
+                                        <span class="circle"></span>
+                                        <span class="yearly">{{$answer->jawaban}}</span>
+                                    </div>
+                                </label>
+                            @endforeach
+                        </div> --}}
                         <div class="content">
-                            <input type="radio" name="rd" id="one">
-                            <input type="radio" name="rd" id="two">
-                            <input type="radio" name="rd" id="three">
-                            <input type="radio" name="rd" id="four">
+                            <input type="radio" name="ans_id" id="one"
+                                value="{{ $test->first()->answers->all()[0]['id'] }}"  @if (session('submitted') == $test->first()->answers->all()[0]['id'])
+                                    checked
+                                @endif>
+                            <input type="radio" name="ans_id" id="two"
+                                value="{{ $test->first()->answers->all()[1]['id'] }}" @if (session('submitted') == $test->first()->answers->all()[1]['id'])
+                                    checked
+                                @endif>
+                            <input type="radio" name="ans_id" id="three"
+                                value="{{ $test->first()->answers->all()[2]['id'] }}" @if (session('submitted') == $test->first()->answers->all()[2]['id'])
+                                    checked
+                                @endif>
+                            <input type="radio" name="ans_id" id="four"
+                                value="{{ $test->first()->answers->all()[3]['id'] }}" @if (session('submitted') == $test->first()->answers->all()[3]['id'])
+                                    checked
+                                @endif>
                             <label for="one" class="box first">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">{{$tests->last()->jawaban1 }}</span>
+                                    <span class="yearly">{{ $test->first()->answers->all()[0]['jawaban'] }}</span>
                                 </div>
                             </label>
                             <label for="two" class="box second">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">{{$tests->last()->jawaban2 }}</span>
+                                    <span class="yearly">{{ $test->first()->answers->all()[1]['jawaban'] }}</span>
                                 </div>
                             </label>
                             <label for="three" class="box third">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">{{$tests->last()->jawaban3 }}</span>
+                                    <span class="yearly">{{ $test->first()->answers->all()[2]['jawaban'] }}</span>
                                 </div>
                             </label>
                             <label for="four" class="box fourw">
                                 <div class="plan">
                                     <span class="circle"></span>
-                                    <span class="yearly">{{$tests->last()->jawaban4 }}</span>
+                                    <span class="yearly">{{ $test->first()->answers->all()[3]['jawaban'] }}</span>
                             </label>
+                            
                         </div>
+
+                        <input type="hidden" name="page_id" value="{{ $test->currentPage() }}">
+                        <input type="hidden" name="next_url" value="{{$test->nextPageUrl()}}">
                     </div>
+                    
+                    {{-- button --}}
+                    <button type="submit" class="btn btn-primary mt-3 @if (session('submitted'))
+                        disabled
+                    @endif">
+                        @if ($test->currentPage() < 10)
+                            Selanjutnya
+                        @else
+                            Selesai
+                        @endif
+                    </button>
                 </div>
-                <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
-                    <button class="btn" type="button"><img src="{{ asset('img/next2.png') }}"></button>
-                </div>
+                    {{-- <div class="d-grid gap-2 d-md-block my-auto mx-4" style="transform: translateY(3rem)">
+                        <a wire:navigate href="{{ $test->nextPageUrl() }}" role="button" class="btn"><img
+                                src="{{ asset('img/next2.png') }}"></a>
+                    </div> --}}
+                </form>
+
 
             </div>
         </div>
@@ -123,6 +165,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script>
+
+    @livewireScripts
 </body>
 
 </html>

@@ -4,8 +4,9 @@ use App\Models\User;
 use App\Livewire\Counter;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\TesPsikologController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,9 @@ Route::middleware(['guest'])->group(function () {
 });
 
 Route::middleware(['auth'])->group(function () {
+    // log out
+    Route::get('/logout', [Controller::class, 'logout'])->name('logout');    
+
     // chatbot
     Route::get('/chatbot', function () {
         return view('features.chatbot');
@@ -66,25 +70,24 @@ Route::middleware(['auth'])->group(function () {
         return view('features/test/HomeTest');
     })->name('test');
     
-    Route::get('/HasilTest1', function () {
-        return view('features/test/HasilTest1');
-    });
+    // Route::get('/HasilTest1', function () {
+    //     return view('features/test/HasilTest1');
+    // });
     
-    Route::get('/HasilTest2', function () {
-        return view('features/test/HasilTest2');
-    });
+    // Route::get('/HasilTest2', function () {
+    //     return view('features/test/HasilTest2');
+    // });
     
-    Route::get('/HasilTest3', function () {
-        return view('features/test/HasilTest3');
-    });
+    // Route::get('/HasilTest3', function () {
+    //     return view('features/test/HasilTest3');
+    // });
     
-    Route::get('/HasilTest4', function () {
-        return view('features/test/HasilTest4');
-    });
+    // Route::get('/HasilTest4', function () {
+    //     return view('features/test/HasilTest4');
+    // });
     
-    Route::get('/TesPsikolog', function () {
-        return view('features/test/TesPsikolog');
-    })->name('soal-test');
+    Route::get('/TesPsikolog', [TesPsikologController::class, 'index'])->name('soal-test');
+    Route::post('/TesPsikolog', [TesPsikologController::class, 'store']);
 });
 
 // Livewire

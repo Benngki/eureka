@@ -243,6 +243,11 @@
                                     Simpan Perubahan
                                 </button>
                             </div>
+                            <div class="col-4 d-flex">
+                                <a href="{{ route('auth.change-password.index')}}" role="button" class="btn btn-success mt-4 flex-fill TMD">
+                                    Ubah Password
+                                </a>
+                            </div>
                         </div>
                     </form>
                 </div>

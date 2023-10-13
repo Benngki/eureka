@@ -18,12 +18,12 @@
 </head>
 
 <body class="min-vh-100 d-flex align-items-center">
-    <div class="container my-auto">
+    <div class="container my-auto ">
         <a href="{{ route('home') }}" class="d-flex justify-content-center">
-            <img style="max-width: 25%;" src="{{ asset('img/logo.svg') }}" alt="Logo Dialog Diri">
+            <img style="max-width: 100%;" class="mt-5 mt-lg-0" src="{{ asset('img/logo.svg') }}" alt="Logo Dialog Diri">
         </a>
 
-        <div class="d-flex justify-content-center mt-5">
+        <div class="d-flex flex-column flex-lg-row justify-content-center mt-5">
             <div>
                 <img style="max-width: 100%" src="{{ asset('img/RegisterImg.png') }}" alt="">
             </div>

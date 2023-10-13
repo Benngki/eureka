@@ -105,16 +105,53 @@
   .ikonnv{
 	background-color: none;
 }
-@media only screen and (max-width : 78px){
-	nav ul {
-		display: none;
 
-	}
-}
-@media (max-width: 1199.98px) { 
+@media (min-width: 1199.98px) { 
 
 	#descHome {
 		inline-size: 10vw !important;
+	}
+	#info2{
+
+	}
+	#info2 img{
+		width: 25% !important;
+	}
+
+	#buttonstart2{
+		width: 40% !important; 
+	}
+	#descfooter{
+		width: 40vw !important;
+	}
+	#testi h3{
+		margin-left: 6rem !important;
+	}
+	#TestPsikology{
+		width: 20vw !important;
+	}
+	#chatbot{
+		width: 20vw !important;
+
+	}
+	#TestPsikology img{
+		width: 15vw !important;
+	}
+	#chatbot img{
+		width: 15vw !important;
+
+	}
+	#News{
+		width: 100% !important;
+	}
+	#item{
+		border: none !important; 
+		width: 20% !important; 
+		margin-top: -1rem !important; 
+		color: white !important;
+	}
+	#warning p{
+		font-size: 20px !important;
 	}
  }
 

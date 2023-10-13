@@ -193,9 +193,9 @@
                 <div class="carousel-inner">
                     <!-- Content1 -->
                     <div class="carousel-item active">
-                        <div class="d-flex justify-content-evenly p-3">
+                        <div class="d-flex flex-column flex-lg-row justify-content-evenly p-3">
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -203,7 +203,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3 my-4  my-lg-0"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -211,7 +211,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -224,8 +224,8 @@
 
                     <!-- Content2 -->
                     <div class="carousel-item">
-                        <div class="d-flex justify-content-evenly p-3">
-                            <div class="card w-25 rounded-4 py-3"
+                        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly p-3">
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3" 
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -233,7 +233,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3 my-4  my-lg-0"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -241,7 +241,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -253,8 +253,8 @@
 
                     <!-- content3 -->
                     <div class="carousel-item">
-                        <div class="d-flex justify-content-evenly p-3">
-                            <div class="card w-25 rounded-4 py-3"
+                        <div id="itemTesti" class="d-flex flex-column flex-lg-row justify-content-evenly p-3">
+                            <div class="card w-100 rounded-4 py-3"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -262,7 +262,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3 my-4  my-lg-0"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
@@ -270,7 +270,7 @@
                                 </div>
                             </div>
 
-                            <div class="card w-25 rounded-4 py-3"
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3"
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">

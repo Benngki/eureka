@@ -100,8 +100,8 @@
                             <br><br>Mulailah bercerita tentang diri anda sekarang!<br>
                         </p>
                     </div>
-                    <button type="button" class="btn rounded-5 btn-lg px-5 mt-lg-5 Buttonhover TMD"
-                        style="background: #48904F; color: white;">Mulai</button>
+                    <a type="button" href="{{route('chatbot')}}" class="btn rounded-5 btn-lg px-5 mt-lg-5 Buttonhover TMD"
+                        style="background: #48904F; color: white;">Mulai</a>
                 </div>
             </div>
         </div>

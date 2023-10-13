@@ -9,6 +9,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TesPsikologController;
+use App\Http\Controllers\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,61 +31,39 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/login', function () {
         return view('guest/Login');
     })->name('login');
-    
     Route::post('/login', [LoginController::class, 'LoginUser'])->name('LoginUser');
     
     // Register
     Route::get('/register', function () {
         return view('guest/Register');
     });
-
+    
     Route::post('/register', [RegisterController::class, 'registerNewUser'])->name('registerNewUser');
     
     
-    Route::get('/forgot-password', function () {
-        return view('guest/ForgotPassword');
-    });
-    Route::get('/ResetPassword', function () {
-        return view('guest/ChangePassword');
-    });
 });
 
 Route::middleware(['auth'])->group(function () {
+    // change-password
+    Route::get('/change-password', [ChangePasswordController::class, 'index'])->name('auth.change-password.index');
+    Route::post('/change-password', [ChangePasswordController::class, 'update'])->name('auth.change-password.update');
+
+    // log out
+    Route::get('/logout', [Controller::class, 'logout'])->name('logout');    
+    
     // profile 
     Route::post('/profile', [UserController::class,'update'])->name('profile.update');
     Route::post('/profile/update-avatar', [UserController::class,'updateImage'])->name('profile.update.avatar');
     Route::get('/profile', [ProfileController::class, 'index'])->name('profile.index');
 
-    // log out
-    Route::get('/logout', [Controller::class, 'logout'])->name('logout');    
-
     // chatbot
     Route::get('/chatbot', function () {
         return view('features.chatbot');
     })->name('chatbot');
-
     Route::get('/chatbot/{chat}', [Controller::class, 'chatbot'])->name('chat');
-
-    Route::get('/test', function () {
-        return view('features/test/HomeTest');
-    })->name('test');
     
-    Route::get('/HasilTest1', function () {
-        return view('features/test/HasilTest1');
-    });
-    
-    Route::get('/HasilTest2', function () {
-        return view('features/test/HasilTest2');
-    });
-    
-    Route::get('/HasilTest3', function () {
-        return view('features/test/HasilTest3');
-    });
-    
-    Route::get('/HasilTest4', function () {
-        return view('features/test/HasilTest4');
-    });
-    
+    // test psikologi
+    Route::get('/test', [HomeTestController::class, 'index'])->name('test');    
     Route::get('/TesPsikolog', [TesPsikologController::class, 'index'])->name('soal-test');
     Route::post('/TesPsikolog', [TesPsikologController::class, 'store']);
 });

@@ -253,12 +253,12 @@
 
                     <!-- content3 -->
                     <div class="carousel-item">
-                        <div id="itemTesti" class="d-flex flex-column flex-lg-row justify-content-evenly p-3">
-                            <div class="card w-100 rounded-4 py-3"
+                        <div class="d-flex flex-column flex-lg-row justify-content-lg-evenly p-3">
+                            <div id="itemTesti" class="card w-100 rounded-4 py-3" 
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
-                                    <p class="card-text ps-4">“"Saya merasa lebih baik setelah menggunakan produk ini."</p>
+                                    <p class="card-text ps-4">"Rekomendasi bagi siapa saja yang mencari solusi terbaik."</p>
                                 </div>
                             </div>
 
@@ -266,7 +266,7 @@
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
-                                    <p class="card-text ps-4">"Sumber inspirasi bagi saya untuk bangkit dari masa-masa sulit."</p>
+                                    <p class="card-text ps-4">"Pengalaman positif yang membuat saya ingin terus menggunakan produk ini."</p>
                                 </div>
                             </div>
 
@@ -274,11 +274,10 @@
                                 style="background-color: #FCF4F0;border: none; box-shadow: 0px 2px 10px 3px rgba(0,0,0,0.15);">
                                 <div class="card-body d-flex justify-content-center align-items-center">
                                     <img style="width:50%;" src="{{ asset('img/profile.png') }}" alt="">
-                                    <p class="card-text ps-4">"Mental health website ini memberikan informasi yang sangat bermanfaat."</p>
+                                    <p class="card-text ps-4">"Produk inovatif dan sesuai dengan kebutuhan saya."</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -304,7 +303,7 @@
             <div style="width: 50vw;">
                 <h3 class="mt-lg-5 my-3 fw-bolder">Sosial Media</h3>
                 <div class="d-flex justify-content-start">
-                    <a class="me-3" href=""><img src="{{ asset('img/Twitter.svg') }}" alt=""></a>
+                    <a class="me-3" href="https://twitter.com/_DialogDiri"><img src="{{ asset('img/Twitter.svg') }}" alt=""></a>
                 </div>
             </div>
         </div>

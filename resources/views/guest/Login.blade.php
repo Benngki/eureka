@@ -55,16 +55,16 @@
                     </div>
                     <button type="submit" class="btn btnLogin w-100 mb-3" style="">Masuk</button>
                 </form>
-                <div class="text-center" style="font-size: smaller;">
+                {{-- <div class="text-center" style="font-size: smaller;">
                     <a wire:navigate wire style="font-family: 'Open Sans', sans-serif;" href="/forgot-password">Lupa kata sandi?</a>
-                    <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Masuk instan dengan akunmu</p>
-                </div>
-                <div class="d-flex justify-content-center">
+                    
+                </div> --}}
+                {{-- <div class="d-flex justify-content-center">
                     <button type="button" class="btn rounded-5"><img src="{{ asset('img/logoGoogle.png') }}"
                             alt=""></button>
                     <button type="button" class="btn rounded-5"><img src="{{ asset('img/logoFB.png') }}"
                             alt=""></button>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -71,13 +71,13 @@
                 </div>
 
 
-                <div class="text-center" style="font-size: smaller;">
+                {{-- <div class="text-center" style="font-size: smaller;">
                     <p style="font-family: 'Open Sans', sans-serif;" class="mt-1">Daftar Instan lewat akun: </p>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="button" class="btn rounded-5"><img src="/img/logoGoogle.png" alt=""></button>
                     <button type="button" class="btn rounded-5"><img src="/img/logoFB.png" alt=""></button>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
